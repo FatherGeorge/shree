@@ -1,0 +1,133 @@
+placeholderTextView()
+  text-overflow ellipsis
+  color rgba(0,0,0,.5)
+  font-size 16px
+
+placeholderTextViewIE11()
+  text-overflow ellipsis
+  color #000 !important
+  font-size 16px
+
+placeholderAnimationShow()
+  opacity 1
+  transition opacity 0.3s ease
+
+placeholderAnimationHide()
+  opacity 0
+  transition opacity 0.3s ease
+
+$placeholder
+  &[placeholder]
+    placeholderTextView()
+  &::-webkit-input-placeholder
+    placeholderTextView()
+  &::-moz-placeholder
+    placeholderTextView()
+  &:-moz-placeholder
+    placeholderTextView()
+  &:-ms-input-placeholder
+    placeholderTextViewIE11()
+
+  &::-webkit-input-placeholder
+    placeholderAnimationShow()
+  &::-moz-placeholder
+    placeholderAnimationShow()
+  &:-moz-placeholder
+    placeholderAnimationShow()
+  &:-ms-input-placeholder
+    placeholderAnimationShow()
+
+  &:focus::-webkit-input-placeholder
+    placeholderAnimationHide()
+  &:focus::-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-ms-input-placeholder
+    placeholderAnimationHide()
+
+
+// white
+placeholderTextViewWhite()
+  text-overflow ellipsis
+  color rgba(255, 255, 255, 0.5)
+  font-size 16px
+
+placeholderTextViewIE11White()
+  text-overflow ellipsis
+  color rgba(255, 255, 255, 0.5) !important
+  font-weight 300
+
+$placeholderWhite
+  &[placeholder]
+    placeholderTextViewWhite()
+  &::-webkit-input-placeholder
+    placeholderTextViewWhite()
+  &::-moz-placeholder
+    placeholderTextViewWhite()
+  &:-moz-placeholder
+    placeholderTextViewWhite()
+  &:-ms-input-placeholder
+    placeholderTextViewIE11White()
+
+  &::-webkit-input-placeholder
+    placeholderAnimationShow()
+  &::-moz-placeholder
+    placeholderAnimationShow()
+  &:-moz-placeholder
+    placeholderAnimationShow()
+  &:-ms-input-placeholder
+    placeholderAnimationShow()
+
+  &:focus::-webkit-input-placeholder
+    placeholderAnimationHide()
+  &:focus::-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-ms-input-placeholder
+    placeholderAnimationHide()
+  
+// select
+placeholderTextViewSelect()
+  text-overflow ellipsis
+  color #A3ACBA
+  font-family $font-light
+
+placeholderTextViewIE11Select()
+  text-overflow ellipsis
+  color #A3ACBA !important
+  font-family $font-light
+
+$placeholderSelect
+  &[placeholder]
+    placeholderTextViewSelect()
+  &::-webkit-input-placeholder
+    placeholderTextViewSelect()
+  &::-moz-placeholder
+    placeholderTextViewSelect()
+  &:-moz-placeholder
+    placeholderTextViewSelect()
+  &:-ms-input-placeholder
+    placeholderTextViewIE11Select()
+
+  &::-webkit-input-placeholder
+    placeholderAnimationShow()
+  &::-moz-placeholder
+    placeholderAnimationShow()
+  &:-moz-placeholder
+    placeholderAnimationShow()
+  &:-ms-input-placeholder
+    placeholderAnimationShow()
+
+  &:focus::-webkit-input-placeholder
+    placeholderAnimationHide()
+  &:focus::-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-moz-placeholder
+    placeholderAnimationHide()
+  &:focus:-ms-input-placeholder
+    placeholderAnimationHide()
+
+$touchSelectSkip
+  -webkit-tap-highlight-color transparent

@@ -1,0 +1,310 @@
+.header
+  position: absolute;
+  left: 0;
+  z-index: 20;
+  right: 0;
+  top: 0;
+
+  &__top
+    background-color rgba(0,0,0,.5)
+    padding 10px 0
+    +to-width($screen-sm-max)
+      padding 10px 0
+
+    > .container
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+  &__mobile
+    display none
+    +to-width($screen-sm-max)
+      display flex
+      align-items baseline
+      justify-content space-between
+      margin-left auto
+      > *
+        margin-left 20px
+
+  &__wrapper
+    display flex
+    align-items center
+    justify-content space-between
+    +to-width($screen-xs-max)
+      padding-top: 15px;
+      padding-bottom: 0
+
+  &__logo
+    flex none
+    color #fff
+    font-family Romul
+    +to-width($screen-xs-max)
+      width 50%
+
+    span
+      display block
+
+    &--subtext
+      font-size 7pt
+
+    &--name
+      font-size 13pt
+
+  &__menu
+    flex: none;
+    width: 55%;
+    margin-left: 40px;
+
+  &__contacts
+    display flex
+    justify-content flex-end
+    align-items center
+    margin-left auto
+    flex: none;
+    > *
+      flex none
+    +to-width($screen-md-max)
+      display none
+
+    svg
+      width 30px
+      height 30px
+
+      path
+        fill $base-color
+
+  &__phone--wrapper
+    text-align: right;
+    margin-left 15px
+
+  &__phone
+    display block
+    font-weight 300
+    font-size: 20px;
+    line-height: 1
+    font-family $font-second
+    color rgba(255,255,255,0.7)
+    +to-width($screen-sm-max)
+      display none
+
+    &:hover
+      color $base-color
+
+
+.logo
+  display block
+  width 247px
+  height 137px
+  background-image url(../img/custom/logo.png)
+  background-repeat no-repeat
+  background-size cover
+  +to-width($screen-xs-max)
+    width 100%
+    max-height 90px
+    background-size contain
+    background-position: center;
+
+.nav
+  &__list
+    display flex
+    justify-content space-between
+    align-items center
+    margin 0
+    padding 0
+    list-style none
+
+  &__item
+    padding 0
+    margin 0
+    text-align center
+    height: 100%;
+    line-height: 68px;
+    position relative
+    overflow hidden
+
+  &__link
+    display block
+    line-height 68px
+    color #fff
+    text-transform uppercase
+    font-weight 300
+    position relative
+    z-index 2
+    padding: 0 10px;
+    font-size: 12px;
+    &:after
+      content ""
+      display block
+      position absolute
+      width 0
+      height 2px
+      background-color $base-color
+      left 50%
+      transform translateX(-50%)
+      bottom 0
+      transition width 1.2s
+
+    &:not(.nav__link--logout):hover
+      color #fff
+      &:after
+        width 100%
+
+    &--logout
+      border: 2px solid rgba(255,255,255,.5);
+      border-radius: 25px;
+      padding: 0 25px;
+      line-height: 34px;
+
+      &:hover
+        background-color $base-color
+        color #fff
+        border 2px solid $base-color
+
+
+
+
+// animate phone icon - bzzzz
+.header__contacts:hover
+  svg path:nth-child(1)
+    animation handset-icon 0.2s alternate
+
+  svg path:nth-child(2)
+    animation bell-icon 1s infinite
+
+@keyframes bell-icon
+  0%
+    opacity 0
+
+  50%
+    opacity .5
+
+  100%
+    opacity 1
+
+@keyframes handset-icon
+  0%
+    transform rotate(-2deg)
+
+  50%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(-2deg)
+
+
+.fixed-menu
+  position: fixed;
+  z-index: 100;
+  top: -70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  background-color rgba(14,14,14,.9)
+  padding 20px 0
+  box-shadow: 0 2px 8px rgba(0,22,45,0.15);
+  transition: all .3s ease;
+
+  &__wrapper
+    display: flex;
+    justify-content: space-between;
+    align-items center
+
+    & .logo
+        width: 164px;
+        height: 45px;
+
+  &--show
+    top: 0;
+
+
+.banner
+  background-image: url(../img/custom/main-banner.jpg)
+  background-position 50% 50%
+  background-size cover
+  min-height 100vh
+  padding 100px 0 50px
+  +to-width($screen-sm-max)
+    padding 70px 0 30px
+
+  > .container
+    height 100%
+    //position absolute
+    //z-index 2
+    //left: 50%;
+    //transform: translateX(-50%);
+
+  iframe
+    position relative
+    z-index 1
+    max-width 100%
+    height 100vh
+
+  &__logo
+    height 100%
+    display flex
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  &__name
+    font-family: 'Romul', sans-serif;
+    color #fff
+    font-size 50pt
+    margin 0
+    font-weight normal
+    +to-width($screen-md-max)
+      font-size 40pt
+    +to-width($screen-sm-max)
+      font-size 30pt
+
+  &__subtext
+    color #fff
+    font-family: 'Romul', sans-serif;
+    font-size 15pt
+    text-align center
+    margin 0
+    font-weight normal
+    +to-width($screen-md-max)
+      font-size 13pt
+    +to-width($screen-sm-max)
+      font-size 10pt
+
+  &__text
+    width 65%
+    background-color rgba(0,0,0,.5)
+    color #fff
+    font-weight 300
+    text-align center
+    padding 25px 0
+    margin 40px auto
+    position relative
+    +to-width($screen-sm-max)
+      width: 85%;
+      padding: 15px;
+    +to-width($screen-xs-max)
+      width: 100%;
+      font-size: 13px;
+
+    &:before,
+    &:after
+      content ""
+      display block
+      position absolute
+      top 0
+      width 100px
+      height 122px
+      background transparent
+      +to-width($screen-sm-max)
+        display none
+
+    &:before
+      left -100px
+      background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0))
+
+    &:after
+      right -100px
+      background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
+

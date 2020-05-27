@@ -1,0 +1,81 @@
+/****************************
+      Button style
+****************************/
+.btn,
+a.btn
+  display inline-block
+  height 55px
+  line-height 55px
+  padding 0 30px
+  cursor pointer
+  font-weight 500
+  font-size 14px
+  letter-spacing: 0.8px;
+  text-transform uppercase
+  text-align center
+  border-radius 25px
+  box-shadow  0 10px 15px rgba(0,0,0,.5)
+  transition 0.7s
+  +to-width($screen-xm-max)
+    width 50%
+  +to-width($screen-xs-max)
+    width 100%
+    font-size 13px
+    letter-spacing: 0.6px;
+
+  &:nth-child(2n)
+    margin-left 10px
+
+  &--full
+    color #fff
+    background-color $base-color
+    border solid 2px $base-color
+    &:hover
+      border solid 2px $base-color-hover
+      color #fff
+      background-color $base-color-hover
+
+  &--transparent
+    color #080d26
+    background-color transparent
+    border solid 2px $base-color
+    &:hover
+      border solid 2px $base-color-hover
+      color #080d26
+      background-color $base-color-hover
+
+  &--submit
+    width 100%
+
+  &--mobile
+    display none
+    +to-width($screen-sm-max)
+      display block
+
+input[type="submit"]
+  background-color $base-color
+  color #fff
+  font-weight 600
+  text-transform uppercase
+  font-size 14px
+  letter-spacing 0.55px
+  transition 0.7s
+  border none
+  &:hover
+    background-color $base-color + #222
+
+.btn__wrapper
+  display flex
+  align-items baseline
+  justify-content flex-start
+  margin-top 40px
+
+  &--center
+    justify-content center
+
+  &--how
+    justify-content center
+    margin-top -28px
+
+  > *:not(:first-child)
+    margin-left 20px

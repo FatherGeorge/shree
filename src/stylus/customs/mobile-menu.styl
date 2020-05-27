@@ -1,0 +1,45 @@
+/****************************
+      Menu Body
+****************************/
+.header__menu
+  +to-width($screen-md-max)
+    animation none
+    visibility hidden
+    opacity 0
+    padding-top 0
+    height 0
+    z-index 105
+    position absolute
+    left 0
+    top 0
+    right 0
+    bottom 0
+    width 100%
+    margin 0
+    background-color $blue-color
+    transition all .5s
+    .nav__list
+      display: block;
+      height: 0;
+      width: 50%;
+      margin: 0 auto;
+    .nav__item
+      width auto
+      line-height 48px
+    .nav__link
+      line-height 48px
+
+    .mobile-menu--open &
+      visibility visible
+      opacity 1
+      height 100vh
+      min-height: 100vh;
+      transition all .5s
+      padding-top 80px
+      .nav__list
+        height auto
+
+body.mobile-menu--open
+  height 100vh
+  overflow hidden
+

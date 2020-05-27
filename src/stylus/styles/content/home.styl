@@ -1,0 +1,884 @@
+$program-border = 150px
+$program-width = 65%
+
+//-----------------
+.title
+  &__wrapper
+    text-align center
+    margin 0 0 50px
+    font-weight normal
+    +to-width($screen-sm-max)
+      margin-bottom 40px
+    +to-width($screen-xs-max)
+      margin-bottom 20px
+
+    &--how
+      color $base-color
+      margin-bottom 40px
+      +to-width($screen-xs-max)
+        margin-bottom 20px
+
+  &__main
+    font-family $font-second
+    font-size 40px
+    +to-width($screen-sm-max)
+      font-size 30px
+    +to-width($screen-xs-max)
+      font-size 25px
+
+  &__subtext
+    font-family $font-second
+    font-size 20px
+    +to-width($screen-sm-max)
+      font-size: 15px;
+      margin-bottom: 10px;
+    +to-width($screen-xs-max)
+      font-size 13px
+
+
+
+//-----------------
+.about
+  padding 90px 0
+  
+  +to-width($screen-sm-max)
+    padding 40px 0
+  
+  &__list
+    margin 30px 0
+    +to-width($screen-md-max)
+      display block
+    
+  &__item
+    text-align center
+    
+  &__icon
+    width 167px
+    height 167px
+    background-size cover
+    margin 0 auto 30px
+
+    &--1
+      background-image url(../img/custom/lot1.png)
+
+    &--2
+      background-image url(../img/custom/lot2.png)
+
+    &--3
+      background-image url(../img/custom/lot3.png)
+
+    &--4
+      background-image url(../img/custom/lot4.png)
+
+  &__name
+    text-transform uppercase
+    position relative
+
+    &:after
+      content: ''
+      display block
+      width 30%
+      margin 20px auto 15px
+      height 1px
+      background-color #000
+
+  &__desc
+    font-size 14px
+    color #939598
+
+
+//-----------------
+.video
+  background-image url(../img/custom/img-video.jpg)
+  background-size cover
+  background-position 50% 50%
+  min-height 500px
+  height 100vh
+
+  +to-width($screen-sm-max)
+    min-height auto
+
+
+//-----------------
+.program
+  background-color #f1f2f2
+  background-image url(../img/custom/lotos.png)
+  background-position 50% 50%
+  background-repeat no-repeat
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__wrapper
+    background-color #fff
+    text-align center
+    position relative
+    border-radius $program-border
+    padding 35px
+    width $program-width
+    margin 0 auto 40px
+
+    +to-width($screen-sm-max)
+      width 90%
+
+    &:before
+      content: ''
+      display block
+      border-radius $program-border + 20px
+      background-color rgba(0,0,0,.1)
+      position absolute
+      left -10px
+      right -10px
+      top -10px
+      bottom -10px
+      z-index -1
+
+  &__title
+    font-family $font-second
+    font-size 20px
+    color $second-color
+    font-weight normal
+    margin-bottom 20px
+    letter-spacing 0.5px
+    position relative
+    +to-width($screen-xs-max)
+      font-size 15px
+
+    &:after
+      content: ''
+      display block
+      width 30%
+      margin 20px auto 15px
+      height 1px
+      background-color #000
+
+  &__desc
+    color #939598
+
+
+//-----------------
+.with-border
+  display flex
+  align-items center
+  justify-content center
+  position relative
+  font-family $font-second
+  +to-width($screen-xs-max)
+    flex-wrap wrap
+
+  span
+    display block
+    flex none
+    +to-width($screen-xs-max)
+      flex auto
+
+  &:before,
+  &:after
+    content ""
+    display block
+    max-width 20%
+    flex 0 20%
+    height 1px
+    background-color #cdcece
+    margin 0 30px
+    +to-width($screen-xs-max)
+      display none
+
+.text-border
+  &__wrapper
+    width 100%
+    text-align center
+    margin: 0 auto;
+
+    &--program
+      width $program-width
+      +to-width($screen-xs-max)
+        width 100%
+
+  &__title
+    display flex
+    align-items center
+    justify-content center
+    position relative
+    font-family $font-second
+
+    span
+      display block
+      flex none
+
+    &:before,
+    &:after
+      content ""
+      display block
+      max-width 20%
+      flex 0 20%
+      height 1px
+      background-color #cdcece
+      margin 0 30px
+      +to-width($screen-xs-max)
+        display none
+
+    &--title
+      font-size 35px
+      line-height 1.2
+      +to-width($screen-xs-max)
+        font-size 20px
+
+    &--program
+      font-size 25px
+      +to-width($screen-xs-max)
+        font-size 15px
+
+  &__text
+    margin: 10px auto 0;
+    width 65%
+    +to-width($screen-xs-max)
+      width 100%
+
+    &--program
+      width $program-width
+      +to-width($screen-xs-max)
+        width 100%
+
+    &--title
+      font-family $font-second
+      font-size 20px
+      line-height 1.2
+      +to-width($screen-xs-max)
+        font-size 15px
+
+//-----------------
+.reviews
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__list
+    margin-top 40px
+
+  &__item
+    width 100%
+    display flex
+    flex-direction column
+    align-items flex-start
+    justify-content flex-start
+    border-radius 25px
+    transition all .7s
+    &:hover
+      transform translateY(-10px)
+      box-shadow 0 0 15px rgba(0,0,0,.1)
+
+  &__img
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    height 210px
+    background-size cover
+    background-position 50% 50%
+    background-repeat no-repeat
+    border-top-left-radius 25px
+    border-top-right-radius 25px
+    position relative
+
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      background-color rgba(0,0,0,.5)
+      border-top-left-radius 25px
+      border-top-right-radius 25px
+
+  &__icon
+    position: relative;
+    z-index: 3;
+    width 68px
+    height 68px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 50%
+    border 1px solid $base-color
+    transition all .7s
+
+    svg
+      width auto
+      height 48px
+      transition all .7s
+
+      path
+        fill transparent
+        stroke $base-color
+        stroke-width 14px
+
+  &__desc
+    width 100%
+    background-color #f1f2f2
+    padding 35px
+    text-align center
+    border-bottom-right-radius 25px
+    border-bottom-left-radius 25px
+
+  &__user
+    font-family $font-second
+    color $second-color
+    font-size 18px
+    text-transform uppercase
+    margin-bottom 15px
+
+
+.reviews__item:hover .reviews__icon
+  background-color $base-color
+
+  svg path
+    fill #fff
+    stroke #fff
+    stroke-width 14px
+
+
+//-----------------
+.how
+  padding 100px 0
+  background-image url(../img/custom/how.jpg)
+  background-size cover
+  background-position 50% 50%
+  color #fff
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__bg
+    border-radius 35px
+    background-color rgba(0,0,0,.5)
+    padding 40px
+    +to-width($screen-xs-max)
+      padding 30px
+
+  &__wrapper
+    width 60%
+    margin 0 auto 40px
+    +to-width($screen-sm-max)
+      width 100%
+
+  &__text
+    width 60%
+    text-align center
+    margin 40px auto 50px
+    +to-width($screen-sm-max)
+      width 100%
+      padding 0 10px
+    +to-width($screen-xs-max)
+      margin 20px auto
+
+  &__twelve
+    display flex
+    justify-content center
+    align-items center
+    line-height 1
+    margin-bottom 40px
+    +to-width($screen-xs-max)
+      flex-direction column
+
+  &__desc
+    display flex
+    align-items flex-start
+    justify-content flex-start
+    +to-width($screen-xs-max)
+      flex-direction column
+
+  &__budda
+    width 103px
+    height 118px
+    background-image url(../img/custom/icon_budda.png)
+    margin-right 35px
+    +to-width($screen-xs-max)
+      margin: 0 auto 20px auto;
+
+  &__list
+    margin 0
+    padding 0
+    list-style none
+
+  &__item
+    margin 0 0 10px
+    padding 0 0 0 20px
+    position relative
+
+    &:before
+      content ""
+      display block
+      width 3px
+      height 3px
+      border-radius 50%
+      background-color #fff
+      position absolute
+      left 0
+      top 50%
+      transform translateY(-50%)
+
+.btn__wrapper--how .btn
+  +to-width($screen-xs-max)
+    width 70%
+
+
+//------------------
+.twelve
+  &-center
+    width auto
+    color $base-color
+    font-family $font-second
+    font-size: 150px;
+    line-height: 1;
+    text-shadow 5px 0 15px rgba(0,0,0,.4)
+
+  &-left,
+  &-right
+    width: 100%;
+
+    &__item
+      text-transform uppercase
+      color #fff
+      font-size 14px
+      font-weight 300
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,.3);
+
+      &:nth-child(1)
+        margin-bottom 10px
+
+  &-left
+    text-align: right;
+    +to-width($screen-xs-max)
+      text-align center
+
+    &__item
+      border-right: none;
+      border-top-left-radius 25px
+      border-bottom-left-radius 25px
+      +to-width($screen-xs-max)
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius 25px
+
+  &-right
+    text-align: left;
+    +to-width($screen-xs-max)
+      text-align center
+
+    &__item
+      border-left: none;
+      border-top-right-radius 25px
+      border-bottom-right-radius 25px
+      +to-width($screen-xs-max)
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius 25px
+
+
+//-----------------
+.experience
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__item
+    text-align center
+
+  &__icon
+    width 167px
+    height 160px
+    margin 0 auto 30px
+    background-size cover
+
+    &--1
+      background-image url(../img/custom/icon1.png)
+
+    &--2
+      background-image url(../img/custom/icon2.png)
+
+    &--3
+      background-image url(../img/custom/icon3.png)
+
+    &--4
+      background-image url(../img/custom/icon4.png)
+
+    &--5
+      background-image url(../img/custom/icon5.png)
+
+    &--6
+      background-image url(../img/custom/icon6.png)
+
+
+//-----------------
+.teachers
+  background-color #f1f2f2
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__title
+    font-family $font-second
+    line-height 1.2
+    font-size 50px
+    text-align center
+    +to-width($screen-sm-max)
+      font-size 40px
+    +to-width($screen-xs-max)
+      font-size 30px
+
+    span
+      display block
+      font-size 30px
+      +to-width($screen-sm-max)
+        font-size 20px
+      +to-width($screen-xs-max)
+        font-size 15px
+
+  &__list
+    margin-top 40px
+    +to-width($screen-sm-max)
+      margin-top 0
+
+  &__item
+    width 100%
+    display flex
+    justify-content space-between
+    border-radius 25px
+    position relative
+    z-index 2
+    +to-width($screen-xs-max)
+      flex-direction column
+
+    &:after
+      content ""
+      position absolute
+      bottom 0
+      left 50%
+      transform translateX(-50%)
+      width 50%
+      height 50px
+      border-radius 50%
+      z-index -1
+      background-color rgba(0,0,0,.5)
+      filter: blur(30px);
+
+  &__img
+    display flex
+    flex-direction column
+    justify-content flex-end
+    align-items center
+    width 100%
+    height: auto;
+    min-height: 420px;
+    background-size cover
+    background-position 50% 50%
+    background-repeat no-repeat
+    border-top-left-radius 25px
+    border-bottom-left-radius 25px
+    position relative
+    +to-width($screen-xs-max)
+      height 200px
+      min-height auto
+      border-radius 0
+      border-top-left-radius 25px
+      border-top-right-radius 25px
+
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      border-top-left-radius 25px
+      border-bottom-left-radius 25px
+      background #92278f
+      background linear-gradient(45deg, #92278f 0%,#92278f 0%,#00c0f3 100%)
+      opacity 0.5
+      +to-width($screen-xs-max)
+        border-radius 0
+        border-top-left-radius 25px
+        border-top-right-radius 25px
+
+  &__bg
+    position relative
+    z-index 3
+    width 100%
+    height 40%
+    display flex
+    justify-content center
+    align-items center
+    border-bottom-left-radius 25px
+    background-color rgba(0,0,0,.5)
+    +to-width($screen-xs-max)
+      border-radius 0
+
+  &__icon
+    position relative
+    display flex
+    align-items center
+    justify-content center
+    z-index 3
+    width 68px
+    height 68px
+    border-radius 50%
+    border 1px solid $base-color
+    transition all .7s
+    +to-width($screen-xs-max)
+      width 50px
+      height 50px
+
+    & svg
+      width auto
+      height 30px
+      transition all .7s
+      +to-width($screen-xs-max)
+        height 20px
+
+      path
+        fill $base-color
+        transition all .7s
+
+    &:hover
+      background-color $base-color
+      box-shadow 10px 0 15px rgba(0,0,0,.5)
+
+      & svg path
+        fill #fff
+
+  &__desc
+    width 100%
+    background-color #fff
+    padding 35px
+    border-top-right-radius 25px
+    border-bottom-right-radius 25px
+    +to-width($screen-xs-max)
+      padding 25px
+      border-radius 0
+      border-bottom-right-radius 25px
+      border-bottom-left-radius 25px
+
+  &__user
+    font-family $font-second
+    color $second-color
+    font-size 20px
+    text-transform uppercase
+    margin-bottom 15px
+
+  &__skills
+    color $second-color
+    font-size 13px
+
+  &__info
+    font-size 13px
+    position relative
+
+    &:before
+      content ""
+      display block
+      width 50%
+      height 1px
+      background-color #000000
+      margin 15px 0
+
+
+//-----------------
+.supervisors
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__list
+    margin-top 40px
+    +to-width($screen-xs-max)
+      margin-top 0
+
+  &__item
+    width 100%
+    display flex
+    flex-direction column
+    align-items flex-start
+    justify-content flex-start
+    border-radius 25px
+
+  &__img
+    display flex
+    justify-content flex-end
+    align-items flex-end
+    width 100%
+    height 180px
+    background-size cover
+    background-position 50% 50%
+    background-repeat no-repeat
+    border-top-left-radius 25px
+    border-top-right-radius 25px
+    position relative
+
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      background #92278f
+      background linear-gradient(45deg, #92278f 0%,#92278f 0%,#00c0f3 100%)
+      opacity 0.5
+      border-top-left-radius 25px
+      border-top-right-radius 25px
+
+  &__icon
+    position: relative;
+    z-index: 3;
+    display flex
+    align-items center
+    justify-content center
+    width 68px
+    height 68px
+    margin: 0 30px -34px;
+    background-color $base-color
+    border-radius 50%
+    box-shadow 10px 0 15px rgba(0,0,0,.35)
+    transition all .7s
+
+    & svg
+      width auto
+      height 28px
+
+      path
+        fill #ffffff
+
+    &:hover
+      transform translateY(-10px)
+      box-shadow 0 0 15px rgba(0,0,0,.1)
+
+  &__desc
+    width 100%
+    background-color #f1f2f2
+    padding 35px
+    border-bottom-right-radius 25px
+    border-bottom-left-radius 25px
+    +to-width($screen-xs-max)
+      padding 25px
+
+  &__user
+    font-family $font-second
+    color $second-color
+    font-size 18px
+    text-transform uppercase
+    margin-bottom 15px
+    +to-width($screen-xs-max)
+      display block
+      width: 70%;
+
+  &__info
+    position relative
+    font-size 13px
+    color #000
+
+    &:before
+      content ""
+      display block
+      width 50%
+      height 1px
+      background-color #000000
+      margin 15px 0
+
+//-----------------
+.welcome
+  padding 100px 0
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__item
+    max-width 800px
+    margin 40px auto 0
+    width 100%
+    display flex
+    align-items flex-start
+    justify-content flex-start
+    border-radius 25px
+    +to-width($screen-xs-max)
+      flex-direction column
+
+  &__img
+    flex none
+    width 264px
+    height 264px
+    background-size cover
+    background-position 50% 50%
+    background-repeat no-repeat
+    position relative
+
+  &__desc
+    position relative
+    width 100%
+    background linear-gradient(to right, #ffffff, #f1f2f2)
+    padding 35px
+    border-bottom-right-radius 25px
+    border-top-right-radius 25px
+    +to-width($screen-xs-max)
+      background linear-gradient(to bottom, #ffffff, #f1f2f2)
+      border-radius 0
+      border-bottom-right-radius 25px
+      border-bottom-left-radius 25px
+      padding-bottom 50px
+
+  &__icon
+    cursor pointer
+    position: absolute;
+    right -30px
+    top 50%
+    transform translateY(-50%)
+    z-index: 3;
+    display flex
+    align-items center
+    justify-content center
+    width 68px
+    height 68px
+    background-color $base-color
+    border-radius 50%
+    box-shadow 10px 0 15px rgba(0,0,0,.35)
+    transition all .7s
+    +to-width($screen-md-max)
+      right 10px
+    +to-width($screen-xs-max)
+      right: auto;
+      bottom: -30px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+
+    & svg
+      width auto
+      height 48px
+
+      path
+        fill #ffffff
+
+    &:hover
+      transform translateX(10px) translateY(-50%)
+      box-shadow 0 0 15px rgba(0,0,0,.1)
+
+  &__name
+    font-family $font-second
+    color $second-color
+    font-size 18px
+    text-transform uppercase
+    margin-bottom 15px
+
+  &__skills
+    position relative
+    font-size 14px
+    color #000
+
+    &:before
+      content ""
+      display block
+      width 50%
+      height 1px
+      background-color #000000
+      margin 15px 0

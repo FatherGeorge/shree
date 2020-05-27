@@ -1,0 +1,69 @@
+#contact-modal.modal-wrap.hidden.js_modalWindow
+  .modal-back.js_modalWindowBack
+    .modal-window.js_modalWindowContent
+      .modal-close.js_close-modal-window
+        span
+
+      .modal-body
+        h2.title-block__h2 Отправьте нам заявку
+        p Мы свяжемся с вами в ближайшее время
+
+        .form__wrapper.form__wrapper--modal
+          form(action="", method="POST").form.form--modal
+            .form__row.form__row--modal
+              .form__item.form__item--text.form__item--modal
+                input(type="text", placeholder="Введите свое полное имя", name="name", required)
+
+              .form__item.form__item--text.form__item--modal
+                input(type="email", placeholder="Введите ваш email", name="email", required)
+
+              .form__item.form__item--text.form__item--modal
+                input(type="tel", placeholder="Введите свой номер телефона", name="phone", required)
+
+              .form__item.form__item--submit.form__item--modal
+                button.btn.btn--full.form-submit Отправить
+
+            .success(style="display: none;") Ваша заявка успешно отправлена! Наш специалист свяжется с вами в ближайшее время.
+
+
+#news-modal.modal-wrap.hidden.js_modalWindow
+  .modal-back.js_modalWindowBack
+    .modal-window.modal-window--message.js_modalWindowContent
+      .modal-close.js_close-modal-window
+        span
+
+      .modal-body.modal-body--message
+        h2.title.title--modal Leave a message
+
+        .form__wrapper.form__wrapper--modal
+          form(action="", method="GET")
+            .row
+              .col-1-2.col-medium-1-1
+                .form__item.form__item--text.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay=".3s")
+                  label(for="name") Name
+                  input(type="text", placeholder="Enter your full name", name="name")
+
+                .row
+                  .col-1-2.col-small-1-1
+                    .form__item.form__item--text.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay=".5s")
+                      label(for="email") E-mail
+                      input(type="email", placeholder="Enter valid e-mail adress", name="email")
+                  .col-1-2.col-small-1-1
+                    .form__item.form__item--text.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay="0.8s")
+                      label(for="phone") Phone number
+                      input(type="tel", placeholder="Leave your phone number", name="phone")
+
+                .form__item.form__item--text.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay="1.1s")
+                  label(for="subject") Subject
+                  .select_option
+                    select(id="subject", name="subject", placeholder="Pick a subject").js_select
+                      option Pick a subject
+                      option Review
+                      option Question
+
+              .col-1-2.col-medium-1-1
+                .form__item.form__item--submit.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay="0.3s")
+                  label(for="message") Message
+                  textarea(placeholder="Leave a message", name="message", class="modal")
+                .form__item.form__item--submit.wow.animated.fadeInUp(data-wow-duration="1.5s", data-wow-delay="0.5s")
+                  input.btn(type="submit", value="Submit")

@@ -1,0 +1,49 @@
+/********************************
+      Flip box style
+*********************************/
+.flip-box
+  &-inner-wrapper
+    position: relative;
+    -webkit-transform: translateZ(0);
+
+  &-front
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-clip: padding-box;
+    -webkit-transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+    transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    z-index: 10;
+
+  &-back
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    z-index: -1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-clip: padding-box;
+    -webkit-transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+    transition: all .4s cubic-bezier(.2,.85,.4,1.275)!important;
+
+  &:hover
+    .flip-box-back
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      z-index: 1;
+
+    .flip-box-front
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      z-index: -1;

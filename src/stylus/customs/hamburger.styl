@@ -1,0 +1,62 @@
+.hamburger
+  display: none
+  position relative
+  z-index 106
+  height 22px
+  width 28px
+  cursor pointer
+  vertical-align top
+  overflow hidden
+  @extend $touchSelectSkip
+  +to-width($screen-sm-max)
+    display: block
+    margin-right: auto
+
+  &__line
+  &:before
+  &:after
+    content ''
+    position absolute
+    z-index: 5
+    display block
+    height 2px
+    background $base-color
+    transform-origin: center
+    transition 0.5s
+    transform: rotate3d(0, 0, 1, 0deg);
+
+  &:before
+    left 0
+    top 0
+    width 28px
+
+  &__line
+    top 10px
+    left: 5px;
+    width: 24px;
+
+  &:after
+    top 20px
+    left: 10px;
+    width: 20px;
+
+  .mobile-menu--open &
+    .hamburger__line
+      left: -29px
+      transition 0.3s
+  
+    &:before
+      top 10px
+      left 0
+      width 28px
+      transition 0.5s
+      transform: rotate3d(0, 0, 1, 45deg);
+      background #fff
+  
+    &:after
+      top 10px
+      left 0
+      width 28px
+      transition 0.5s
+      transform: rotate3d(0, 0, 1, -45deg);
+      background #fff

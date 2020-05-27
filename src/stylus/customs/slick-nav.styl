@@ -1,0 +1,36 @@
+/*******************************************
+      Slider navigation (arrow + dot)
+********************************************/
+.slick-dots
+  list-style: none;
+  margin: 30px auto;
+  text-align: center;
+  padding 0
+  +to-width($screen-sm-max)
+    margin: 15px auto 0;
+
+  li
+    display inline-block
+    margin-left 10px
+    cursor pointer
+
+    button
+      display: inline-block;
+      border none
+      border-radius 50%
+      width 12px
+      height: 12px;
+      padding: 0;
+      text-indent: -9999px;
+      background-color #607D8B
+      cursor pointer
+      outline none
+
+    &.slick-active
+      button
+        background-color $base-color
+
+body.index
+  .slick-dots
+    +to-width($screen-xs-max)
+      margin: 20px auto 0;

@@ -1,0 +1,73 @@
+.header__mobile
+  display none
+  +to-width($screen-sm-max)
+    display flex
+    align-items center
+    justify-content space-between
+    height: 40px;
+
+  .btn
+    height 40px
+    line-height 40px
+
+  .btn__text
+    display none
+
+
+.hamburger
+  position relative
+  z-index 4
+  width 49px
+  height 40px
+  cursor pointer
+  vertical-align top
+  overflow hidden
+  @extend $touchSelectSkip
+  margin-right auto
+  background-color $blue-color
+  transform skew(-10deg)
+
+  &__line
+  &:before
+  &:after
+    content ''
+    position absolute
+    z-index: 5
+    display block
+    height 2px
+    left 10px
+    background #fff
+    transform-origin: center
+    transition 0.5s
+    transform: rotate3d(0, 0, 1, 0deg);
+
+  &:before
+    top 10px
+    width 28px
+
+  &__line
+    top 20px
+    width: 28px;
+
+  &:after
+    top 29px
+    width: 28px;
+
+  .mobile-menu--open &
+    .hamburger__line
+      left: -29px
+      transition 0.3s
+
+    &:before
+      top 19px
+      left 10px
+      width 28px
+      transition 0.5s
+      transform: rotate3d(0, 0, 1, 45deg);
+
+    &:after
+      top 19px
+      left 10px
+      width 28px
+      transition 0.5s
+      transform: rotate3d(0, 0, 1, -45deg);

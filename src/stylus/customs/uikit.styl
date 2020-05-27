@@ -1,0 +1,103 @@
+/*******************************************
+      Customize uikit style
+********************************************/
+.uk-position-cover
+  background-size cover
+
+.uk-overlay-background:before
+  color $base-color
+
+.uk-overlay-scale
+  transition-duration 3s
+
+.uk-container
+  max-width 1290px
+  padding 0 35px
+
+.uk-modal
+  z-index 3010
+
+[class*="uk-animation-"]
+  animation-duration 1.1s
+  -webkit-animation-duration 1.1s
+
+.animation-top-wrapper.uk-animation-slide-top
+  animation-duration 1.5s
+  -webkit-animation-duration 1.5s
+
+.uk-overlay-icon:before
+  width 30px
+  height 30px
+  margin-top -15px
+  margin-left -15px
+  font-size 30px
+
+.uk-table td,
+.uk-table th
+  padding 8px
+  border-bottom 1px solid #E5E5E5
+
+.uk-alert
+  position relative
+
+  >.uk-close:first-child
+    float none
+    position absolute
+    right 10px
+    top 10px
+
+@-webkit-keyframes uk-fade-bottom
+  0%
+    opacity:0;
+    -webkit-transform:translateY(40%)
+
+  100%
+    opacity:1;
+    -webkit-transform:translateY(0)
+
+
+@keyframes uk-fade-bottom
+  0%
+    opacity:0;
+    transform:translateY(40%)
+
+  100%
+    opacity:1;
+    transform:translateY(0)
+
+.uk-text-center > img,
+.uk-text-center-small > img
+  margin-left auto
+  margin-right auto
+
+@media only screen and (max-width:767px)
+  .uk-overlay-panel
+    padding 0
+
+@media only screen and (max-width:479px)
+  .uk-width-small-1-2,
+  .uk-grid-width-small-1-2 > *
+    width 50%
+
+  .uk-width-small-2-10
+    width 20%
+
+  .uk-width-small-8-10
+    width 80%
+
+@media only screen and (max-width:425px)
+  .uk-grid
+    margin-left -10px
+
+    >*
+      padding-left 10px
+
+    &.uk-grid-collapse > *
+      padding 0
+
+.uk-height-viewport
+  min-height: auto;
+  max-height: 900px;
+
+.uk-modal-dialog
+  padding 0px 50px 50px

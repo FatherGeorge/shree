@@ -1,0 +1,98 @@
+/**********************
+      Input style
+**********************/
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=number],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=color]
+  height: 48px;
+  border-radius: 3px;
+  padding 20px 18px
+  background #fff
+  border 1px solid #fff
+  box-shadow none
+  line-height 1
+  width 100%
+  @extend $placeholder
+  @extend $touchSelectSkip
+
+textarea
+  font-family $font-base
+  resize none
+  width 100%
+  background #fff
+  border-radius: 3px;
+  padding 20px 18px
+  border 1px solid #fff
+  box-shadow none
+  line-height 1
+  @extend $placeholder
+  @extend $touchSelectSkip
+
+//input[type="submit"]
+//  width: 150px;
+//  cursor pointer
+//  margin 0 auto
+//  text-transform none
+//  font-size 12px
+//  border 2px solid #fff
+//  color #fff
+//  letter-spacing 3px
+//  +to-width($screen-xs-max)
+//    width 67%
+//    text-align center
+//    padding: 0;
+//    font-size 12px
+//    letter-spacing 3px
+
+input:not([type]):focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=color]:focus,
+textarea:focus
+  background none
+  box-shadow none
+  border-bottom 1px solid #ccc
+
+input[placeholder],
+textarea[placeholder]
+  color #000
+  font-style normal
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+  color transparent
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder
+  color #000
+
+:focus::-webkit-input-placeholder,
+:focus::-moz-placeholder,
+:focus:-moz-placeholder,
+:focus:-ms-input-placeholder
+  color transparent

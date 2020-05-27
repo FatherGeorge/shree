@@ -1,0 +1,184 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$excellence_1_name = 'excellence_1';
+$excellence_1_x = 0px;
+$excellence_1_y = 0px;
+$excellence_1_offset_x = 0px;
+$excellence_1_offset_y = 0px;
+$excellence_1_width = 79px;
+$excellence_1_height = 60px;
+$excellence_1_total_width = 287px;
+$excellence_1_total_height = 202px;
+$excellence_1_image = '../img/sprite.png';
+$excellence_1 = 0px 0px 0px 0px 79px 60px 287px 202px '../img/sprite.png' 'excellence_1';
+$excellence_2_name = 'excellence_2';
+$excellence_2_x = 163px;
+$excellence_2_y = 0px;
+$excellence_2_offset_x = -163px;
+$excellence_2_offset_y = 0px;
+$excellence_2_width = 68px;
+$excellence_2_height = 58px;
+$excellence_2_total_width = 287px;
+$excellence_2_total_height = 202px;
+$excellence_2_image = '../img/sprite.png';
+$excellence_2 = 163px 0px -163px 0px 68px 58px 287px 202px '../img/sprite.png' 'excellence_2';
+$excellence_3_name = 'excellence_3';
+$excellence_3_x = 77px;
+$excellence_3_y = 150px;
+$excellence_3_offset_x = -77px;
+$excellence_3_offset_y = -150px;
+$excellence_3_width = 64px;
+$excellence_3_height = 42px;
+$excellence_3_total_width = 287px;
+$excellence_3_total_height = 202px;
+$excellence_3_image = '../img/sprite.png';
+$excellence_3 = 77px 150px -77px -150px 64px 42px 287px 202px '../img/sprite.png' 'excellence_3';
+$excellence_4_name = 'excellence_4';
+$excellence_4_x = 89px;
+$excellence_4_y = 74px;
+$excellence_4_offset_x = -89px;
+$excellence_4_offset_y = -74px;
+$excellence_4_width = 60px;
+$excellence_4_height = 60px;
+$excellence_4_total_width = 287px;
+$excellence_4_total_height = 202px;
+$excellence_4_image = '../img/sprite.png';
+$excellence_4 = 89px 74px -89px -74px 60px 60px 287px 202px '../img/sprite.png' 'excellence_4';
+$excellence_5_name = 'excellence_5';
+$excellence_5_x = 89px;
+$excellence_5_y = 0px;
+$excellence_5_offset_x = -89px;
+$excellence_5_offset_y = 0px;
+$excellence_5_width = 64px;
+$excellence_5_height = 64px;
+$excellence_5_total_width = 287px;
+$excellence_5_total_height = 202px;
+$excellence_5_image = '../img/sprite.png';
+$excellence_5 = 89px 0px -89px 0px 64px 64px 287px 202px '../img/sprite.png' 'excellence_5';
+$service_1_name = 'service_1';
+$service_1_x = 163px;
+$service_1_y = 68px;
+$service_1_offset_x = -163px;
+$service_1_offset_y = -68px;
+$service_1_width = 64px;
+$service_1_height = 60px;
+$service_1_total_width = 287px;
+$service_1_total_height = 202px;
+$service_1_image = '../img/sprite.png';
+$service_1 = 163px 68px -163px -68px 64px 60px 287px 202px '../img/sprite.png' 'service_1';
+$service_2_name = 'service_2';
+$service_2_x = 241px;
+$service_2_y = 0px;
+$service_2_offset_x = -241px;
+$service_2_offset_y = 0px;
+$service_2_width = 46px;
+$service_2_height = 62px;
+$service_2_total_width = 287px;
+$service_2_total_height = 202px;
+$service_2_image = '../img/sprite.png';
+$service_2 = 241px 0px -241px 0px 46px 62px 287px 202px '../img/sprite.png' 'service_2';
+$service_3_name = 'service_3';
+$service_3_x = 0px;
+$service_3_y = 150px;
+$service_3_offset_x = 0px;
+$service_3_offset_y = -150px;
+$service_3_width = 67px;
+$service_3_height = 52px;
+$service_3_total_width = 287px;
+$service_3_total_height = 202px;
+$service_3_image = '../img/sprite.png';
+$service_3 = 0px 150px 0px -150px 67px 52px 287px 202px '../img/sprite.png' 'service_3';
+$service_4_name = 'service_4';
+$service_4_x = 0px;
+$service_4_y = 70px;
+$service_4_offset_x = 0px;
+$service_4_offset_y = -70px;
+$service_4_width = 62px;
+$service_4_height = 70px;
+$service_4_total_width = 287px;
+$service_4_total_height = 202px;
+$service_4_image = '../img/sprite.png';
+$service_4 = 0px 70px 0px -70px 62px 70px 287px 202px '../img/sprite.png' 'service_4';
+$spritesheet_width = 287px;
+$spritesheet_height = 202px;
+$spritesheet_image = '../img/sprite.png';
+$spritesheet_sprites = $excellence_1 $excellence_2 $excellence_3 $excellence_4 $excellence_5 $service_1 $service_2 $service_3 $service_4;
+$spritesheet = 287px 202px '../img/sprite.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
