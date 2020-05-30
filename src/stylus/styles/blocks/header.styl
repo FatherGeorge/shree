@@ -221,11 +221,11 @@
 
 
 .banner
-  //position relative
-  //padding-bottom 56.25%
-  //height 0
-  //overflow hidden
-  //min-height 100vh
+  position relative
+  width 100%
+  overflow hidden
+  min-height 55rem
+  height 100vh
   //padding 100px 0 50px
   +to-width($screen-sm-max)
     background-image: url(../img/custom/main-banner.jpg)
@@ -235,37 +235,32 @@
     //padding 70px 0 30px*/
 
   > .container
-    //height 100%
-    top 2%
-    position absolute
-    max-width none
+    top 15rem
+    position relative
     z-index 2
+    //max-width none
     //left: 50%;
+    //height 100%
     //transform: translateX(-50%);
 
   iframe,
   video
-    background-image: url("../img/custom/main-banner.jpg");
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 100vh;
-    position relative
-    top 0
+    background-image url("../img/custom/main-banner.jpg")
+    background-position 50% 50%
+    background-size cover
+    position absolute
+    top 50%
     left 50%
     z-index -100
-    -webkit-transform translateX(-50%) translateY(0%)
-    transform translateX(-50%) translateY(0%)
+    -webkit-transform translateX(-50%) translateY(-50%)
+    transform translateX(-50%) translateY(-50%)
     min-width 100%
     min-height 100%
     width auto
-    //height auto
-    //background-size cover
+    height auto
     pointer-events none
     +to-width($screen-sm-max)
       display none
-
-    //max-width 100%
-    //height 100vh
 
   &__logo
     height 100%

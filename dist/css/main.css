@@ -2088,10 +2088,17 @@ textarea,
   top: 0;
 }
 
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 55rem;
+  height: 100vh;
+}
+
 .banner > .container {
-  top: 2%;
-  position: absolute;
-  max-width: none;
+  top: 15rem;
+  position: relative;
   z-index: 2;
 }
 
@@ -2100,17 +2107,17 @@ textarea,
   background-image: url("../img/custom/main-banner.jpg");
   background-position: 50% 50%;
   background-size: cover;
-  height: 100vh;
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 50%;
   left: 50%;
   z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(0%);
-  -ms-transform: translateX(-50%) translateY(0%);
-      transform: translateX(-50%) translateY(0%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
   min-height: 100%;
   width: auto;
+  height: auto;
   pointer-events: none;
 }
 
