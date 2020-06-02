@@ -35,7 +35,10 @@ $program-width = 65%
     +to-width($screen-xs-max)
       font-size 13px
 
-
+  &__pink
+    font-family $font-second
+    font-size 20px
+    color $second-color
 
 //-----------------
 .about
@@ -192,6 +195,13 @@ $program-width = 65%
     margin 0 30px
     +to-width($screen-xs-max)
       display none
+
+  &__long
+    &:before,
+    &:after
+      max-width 40%
+      flex 0 40%
+
 
 .text-border
   &__wrapper
