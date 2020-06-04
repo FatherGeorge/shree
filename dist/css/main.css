@@ -639,7 +639,7 @@ textarea,
 }
 
 .faculties-main {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .faculties-main__list {
@@ -667,7 +667,6 @@ textarea,
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border-radius: 25px;
-  position: relative;
 }
 
 .faculties-main__img--1 {
@@ -701,9 +700,44 @@ textarea,
   opacity: 0.5;
 }
 
+.faculties-main__img > div {
+  z-index: 4;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.faculties-main__img--title {
+  padding: 1em 1em;
+  color: #fff;
+  font-family: Romul;
+}
+
+.faculties-main__img:hover > div {
+  background-color: rgba(0,0,0,0);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #00c0f3;
+}
+
+.faculties-main__img:hover:before {
+  border-radius: 25px;
+  background: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
 .faculties-main__name {
+  padding-top: 2em;
   text-transform: uppercase;
-  position: relative;
   color: #92278f;
 }
 
@@ -3013,11 +3047,15 @@ input[type="submit"]:hover {
           justify-content: center;
 }
 
-.btn__wrapper--how {
+.btn__wrapper--center-overlapped {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: -28px;
+}
+
+.btn__wrapper--center-overlapped .btn {
+  z-index: 5;
 }
 
 .btn__wrapper > *:not(:first-child) {
@@ -3994,7 +4032,7 @@ input[type=checkbox].checkbox:checked ~ label {
     margin: 0 auto 20px auto;
   }
 
-  .btn__wrapper--how .btn {
+  .btn__wrapper--center-overlapped .btn {
     width: 70%;
   }
 

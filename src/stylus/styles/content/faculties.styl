@@ -5,7 +5,7 @@
 
 //---------------
 .faculties-main
-  padding-top 120px
+  padding-top 100px
 
   &__list
     margin-top 30px
@@ -24,7 +24,7 @@
     background-position 50% 50%
     background-repeat no-repeat
     border-radius 25px
-    position relative
+    //position relative
 
     &--1
       background-image url(../img/custom/faculty-veda.jpg)
@@ -51,9 +51,37 @@
       background linear-gradient(45deg, #92278f 0%,#92278f 0%,#00c0f3 100%)
       opacity 0.5
 
+    > div
+      z-index 4
+      width 100%
+      background-color rgba(0,0,0,.5)
+
+    &--title
+      padding 1em 1em
+      color white
+      font-family $font-second
+
+    &:hover
+      > div
+        background-color rgba(0,0,0,0)
+        transition: all .8s
+        color $base-color
+      &:before
+        border-radius 25px
+        background rgba(0,0,0,.5)
+        transition: all .5s
+        content ""
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 3
+
+
   &__name
+    padding-top 2em
     text-transform uppercase
-    position relative
     color $second-color
 
     &:after
@@ -67,3 +95,6 @@
   &__desc
     font-size 14px
     line-height 2.5em
+
+
+
