@@ -755,6 +755,52 @@ textarea,
   line-height: 2.5em;
 }
 
+.schedule {
+  padding: 50px 0;
+}
+
+.schedule__inner-title {
+  text-align: center;
+  margin: 50px 0 40px;
+  font-weight: 300;
+}
+
+.schedule__icon svg {
+  width: auto;
+  height: 35px;
+}
+
+.schedule__icon svg path {
+  fill: #92278f;
+}
+
+.responsive-table-1 {
+  width: 100%;
+  border-radius: 25px;
+  background-color: #f1f2f2;
+}
+
+.responsive-table-1 td {
+  padding-top: 1.5rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  border-right: solid 3px #fff;
+}
+
+.responsive-table-1 td:last-child {
+  border-right: 0;
+}
+
+.responsive-table-1 tr:last-child td {
+  padding-bottom: 1.5rem;
+}
+
+.underline-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .title__wrapper {
   text-align: center;
   margin: 0 0 50px;
@@ -929,25 +975,36 @@ textarea,
           flex: none;
 }
 
-.with-border:before,
+.with-border:before {
+  content: "";
+  display: block;
+  max-width: 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 15%;
+          flex: 0 15%;
+  height: 1px;
+  background-color: #cdcece;
+  margin-right: 30px;
+}
+
 .with-border:after {
   content: "";
   display: block;
-  max-width: 20%;
+  max-width: 15%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 20%;
-          flex: 0 20%;
+      -ms-flex: 0 15%;
+          flex: 0 15%;
   height: 1px;
   background-color: #cdcece;
-  margin: 0 30px;
+  margin-left: 30px;
 }
 
 .with-border__long:before,
 .with-border__long:after {
-  max-width: 40%;
+  max-width: 100%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 40%;
-          flex: 0 40%;
+      -ms-flex: 0 100%;
+          flex: 0 100%;
 }
 
 .text-border__wrapper {
@@ -3725,6 +3782,18 @@ input[type=checkbox].checkbox:checked ~ label {
 }
 
 @media only screen and (max-width: 959px) {
+  .schedule {
+    padding: 30px 0;
+  }
+
+  .schedule__inner-title {
+    margin-bottom: 40px;
+  }
+
+  .responsive-table-1 {
+    border-radius: 10px;
+  }
+
   .title__wrapper {
     margin-bottom: 40px;
   }
@@ -3941,6 +4010,14 @@ input[type=checkbox].checkbox:checked ~ label {
 }
 
 @media only screen and (max-width: 424px) {
+  .schedule__inner-title {
+    margin-bottom: 20px;
+  }
+
+  .schedule__icon svg {
+    height: 28px;
+  }
+
   .title__wrapper {
     margin-bottom: 20px;
   }
@@ -3972,7 +4049,10 @@ input[type=checkbox].checkbox:checked ~ label {
             flex: auto;
   }
 
-  .with-border:before,
+  .with-border:before {
+    display: none;
+  }
+
   .with-border:after {
     display: none;
   }

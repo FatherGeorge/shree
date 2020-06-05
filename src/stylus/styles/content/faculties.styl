@@ -78,7 +78,6 @@
         right 0
         z-index 3
 
-
   &__name
     padding-top 2em
     text-transform uppercase
@@ -96,5 +95,53 @@
     font-size 14px
     line-height 2.5em
 
+//--------------------
+.schedule
+  padding 50px 0
+  +to-width($screen-sm-max)
+    padding 30px 0
 
+  &__inner-title
+    text-align center
+    margin 50px 0 40px
+    font-weight 300
+    +to-width($screen-sm-max)
+      margin-bottom 40px
+    +to-width($screen-xs-max)
+      margin-bottom 20px
 
+  &__icon
+
+    svg
+      width auto
+      height 35px
+      +to-width($screen-xs-max)
+        height 28px
+
+      path
+        fill $second-color
+
+//--- common ------
+.responsive-table-1
+  width 100%
+  border-radius 25px
+  background-color #f1f2f2
+  +to-width($screen-sm-max)
+    border-radius 10px
+
+  td
+    padding-top 1.5rem
+    padding-left 5px
+    padding-right 5px
+    text-align center
+    border-right solid 3px white
+
+  td:last-child
+    border-right 0
+
+  tr:last-child td
+    padding-bottom 1.5rem
+
+.underline-link
+  text-decoration underline
+  cursor pointer
