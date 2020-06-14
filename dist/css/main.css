@@ -702,6 +702,8 @@ textarea,
 
 .faculties-main__img > div {
   z-index: 4;
+  position: absolute;
+  top: 60px;
   width: 100%;
   background-color: rgba(0,0,0,0.5);
 }
@@ -759,12 +761,6 @@ textarea,
   padding: 50px 0;
 }
 
-.schedule__inner-title {
-  text-align: center;
-  margin: 50px 0 40px;
-  font-weight: 300;
-}
-
 .schedule__icon svg {
   width: auto;
   height: 35px;
@@ -772,6 +768,15 @@ textarea,
 
 .schedule__icon svg path {
   fill: #92278f;
+}
+
+.faculties-courses {
+  padding: 50px 0;
+}
+
+.faculties-courses__desc {
+  padding-top: 2rem;
+  font-size: 14px;
 }
 
 .responsive-table-1 {
@@ -801,6 +806,103 @@ textarea,
   cursor: pointer;
 }
 
+.line-divider {
+  height: 1px;
+  background-color: #cdcece;
+  margin: 30px 0;
+}
+
+.line-divider-short {
+  height: 1px;
+  background-color: #000;
+  width: 10%;
+  margin: 30px auto;
+}
+
+.list-in-oval {
+  padding: 60px 0;
+  font-size: 12px;
+  line-height: 1.6rem;
+}
+
+.list-in-oval__wrapper {
+  background-color: #f2f2f2;
+  text-align: center;
+  position: relative;
+  border-radius: 150px;
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 40px auto 40px;
+}
+
+.list-in-oval__list-left {
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
+  text-align: right;
+  list-style: none;
+}
+
+.list-in-oval__list-left :before {
+  content: "·";
+  font-size: 50px;
+  vertical-align: middle;
+  text-align: center;
+  visibility: hidden;
+}
+
+.list-in-oval__list-right {
+  -ms-flex-preferred-size: 53%;
+      flex-basis: 53%;
+  list-style: none;
+  text-align: left;
+  padding-left: 1.3em;
+}
+
+.list-in-oval__list-right :before {
+  content: "·";
+  font-size: 50px;
+  vertical-align: middle;
+  text-align: center;
+  padding-right: 0.3em;
+}
+
+.two-blocks__with-border {
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+}
+
+.two-blocks__with-border--title {
+  margin-left: 60px;
+  margin-top: 40px;
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #021026;
+}
+
+.two-blocks__with-border ul {
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.two-blocks__with-border ul li {
+  margin: 0 0 10px;
+  padding: 0 0 0 20px;
+}
+
+.two-blocks__with-border ul li:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  vertical-align: middle;
+  background-image: url("../img/custom/marker.png");
+  background-size: cover;
+}
+
 .title__wrapper {
   text-align: center;
   margin: 0 0 50px;
@@ -820,6 +922,22 @@ textarea,
 .title__subtext {
   font-family: Romul;
   font-size: 20px;
+}
+
+.title__light {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.title__light--pink {
+  color: #92278f;
+}
+
+.title__light-no-bottom-margin {
+  margin-bottom: 5px;
+  font-weight: 300;
 }
 
 .title__pink {
@@ -3688,6 +3806,10 @@ input[type=checkbox].checkbox:checked ~ label {
 }
 
 @media only screen and (max-width: 1199px) {
+  .list-in-oval__wrapper {
+    width: 100%;
+  }
+
   .about__list {
     display: block;
   }
@@ -3782,16 +3904,68 @@ input[type=checkbox].checkbox:checked ~ label {
 }
 
 @media only screen and (max-width: 959px) {
+  .faculties-about {
+    padding-top: 110px;
+  }
+
+  .faculties-main {
+    padding-top: 60px;
+  }
+
+  .faculties-main__img {
+    height: 200px;
+  }
+
+  .faculties-main__img > div {
+    top: 40px;
+  }
+
   .schedule {
     padding: 30px 0;
   }
 
-  .schedule__inner-title {
-    margin-bottom: 40px;
+  .faculties-courses {
+    padding: 30px 0;
   }
 
   .responsive-table-1 {
     border-radius: 10px;
+  }
+
+  .list-in-oval {
+    padding: 40px 0;
+  }
+
+  .list-in-oval__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .list-in-oval__list-left {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: left;
+    padding-left: 1.3em;
+    margin: auto;
+    min-width: 360px;
+  }
+
+  .list-in-oval__list-left :before {
+    visibility: visible;
+    padding-right: 0.3em;
+  }
+
+  .list-in-oval__list-right {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: auto;
+    min-width: 365px;
   }
 
   .title__wrapper {
@@ -3805,6 +3979,10 @@ input[type=checkbox].checkbox:checked ~ label {
   .title__subtext {
     font-size: 15px;
     margin-bottom: 10px;
+  }
+
+  .title__light-no-bottom-margin {
+    margin-bottom: 0;
   }
 
   .about {
@@ -4010,12 +4188,16 @@ input[type=checkbox].checkbox:checked ~ label {
 }
 
 @media only screen and (max-width: 424px) {
-  .schedule__inner-title {
-    margin-bottom: 20px;
-  }
-
   .schedule__icon svg {
     height: 28px;
+  }
+
+  .two-blocks__with-border--title {
+    margin-left: 20px;
+  }
+
+  .two-blocks__with-border ul {
+    padding-left: 0;
   }
 
   .title__wrapper {
@@ -4032,6 +4214,10 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .title__subtext {
     font-size: 13px;
+  }
+
+  .title__light-no-bottom-margin {
+    margin-bottom: 0;
   }
 
   .study-program__title {
