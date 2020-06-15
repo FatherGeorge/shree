@@ -639,12 +639,16 @@ textarea,
 }
 
 .faculties-main {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .faculties-main__list {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.faculties-main__list > div {
+  margin: 0;
 }
 
 .faculties-main__item {
@@ -774,9 +778,53 @@ textarea,
   padding: 50px 0;
 }
 
+.faculties-courses__list > div {
+  margin: 15px 0 0 0;
+}
+
 .faculties-courses__desc {
   padding-top: 2rem;
   font-size: 14px;
+}
+
+.faculties-courses__img-1 {
+  background-image: url("../img/custom/krishna.jpg");
+}
+
+.faculties-courses__img-2 {
+  background-image: url("../img/custom/sky-stars-man.jpg");
+}
+
+.faculties-courses__img-3 {
+  background-image: url("../img/custom/mans-eye.jpg");
+}
+
+.faculties-courses__img-4 {
+  background-image: url("../img/custom/earth-woman.jpg");
+}
+
+.faculties-courses__img-5 {
+  background-image: url("../img/custom/brain-food.jpg");
+}
+
+.faculties-courses__img-6 {
+  background-image: url("../img/custom/sky-head.jpg");
+}
+
+.faculties-courses__img-7 {
+  background-image: url("../img/custom/hug-yourself.jpg");
+}
+
+.faculties-courses__img-8 {
+  background-image: url("../img/custom/pregnant.jpg");
+}
+
+.faculties-knowledge__img-1 {
+  background-image: url("../img/custom/books.jpg");
+}
+
+.faculties-knowledge__img-2 {
+  background-image: url("../img/custom/student.jpg");
 }
 
 .responsive-table-1 {
@@ -817,6 +865,14 @@ textarea,
   background-color: #000;
   width: 10%;
   margin: 30px auto;
+}
+
+.line-divider-white {
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.4;
+  width: 40%;
+  margin: 25px auto 20px;
 }
 
 .list-in-oval {
@@ -901,6 +957,86 @@ textarea,
   vertical-align: middle;
   background-image: url("../img/custom/marker.png");
   background-size: cover;
+}
+
+.two-blocks__with-backimg {
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 20px;
+  position: relative;
+  min-height: 445px;
+}
+
+.two-blocks__with-backimg--left {
+  padding: 45px 60px 75px;
+}
+
+.two-blocks__with-backimg--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.two-blocks__with-backimg--right:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 3;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 15px;
+}
+
+.two-blocks__with-backimg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #92278f;
+  background: -o-linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%);
+  background: linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%);
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.two-blocks__item {
+  z-index: 3;
+  position: relative;
+  margin: auto;
+}
+
+.two-blocks__with-margin {
+  margin-top: 50px;
+  margin-bottom: 140px;
+}
+
+.two-blocks__title2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text__bold {
+  font-weight: 500;
+}
+
+.text__c {
+  display: block;
+  text-align: center;
+}
+
+.text__white {
+  color: #fff;
 }
 
 .title__wrapper {
@@ -3810,6 +3946,10 @@ input[type=checkbox].checkbox:checked ~ label {
     width: 100%;
   }
 
+  .two-blocks__with-backimg--left {
+    padding: 30px 30px 60px;
+  }
+
   .about__list {
     display: block;
   }
@@ -3893,6 +4033,12 @@ input[type=checkbox].checkbox:checked ~ label {
   }
 }
 
+@media only screen and (max-width: 1185px) {
+  .two-blocks__with-backimg {
+    min-height: 415px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .display-1024 {
     display: block;
@@ -3900,6 +4046,12 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .hidden-1024 {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .two-blocks__with-backimg {
+    min-height: 300px;
   }
 }
 
@@ -4146,6 +4298,19 @@ input[type=checkbox].checkbox:checked ~ label {
     line-height: 1.4;
   }
 
+  .two-blocks__with-border--title {
+    margin-left: 40px;
+  }
+
+  .two-blocks__with-border ul {
+    padding-left: 20px;
+  }
+
+  .two-blocks__with-margin {
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+
   .modal-window {
     margin: 54px 15px 20px;
     width: calc(100% - 30px);
@@ -4198,6 +4363,14 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .two-blocks__with-border ul {
     padding-left: 0;
+  }
+
+  .two-blocks__with-backimg--left {
+    padding: 15px 15px 40px;
+  }
+
+  .two-blocks__with-backimg--right:before {
+    border: none;
   }
 
   .title__wrapper {
