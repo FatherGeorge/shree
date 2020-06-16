@@ -1,0 +1,103 @@
+.faculty-about
+  padding-top 170px
+  h1
+    .title__main
+      line-height 3rem
+  +to-width($screen-sm-max)
+    padding-top 110px
+  &__title
+    text-align center
+    margin 0 0 35px
+    font-weight normal
+    +to-width($screen-sm-max)
+      margin-bottom 25px
+    +to-width($screen-xs-max)
+      margin-bottom 15px
+  &__text
+    text-align center
+    font-size 1.4rem
+    +to-width($screen-sm-max)
+      font-size 1.2rem
+.qualification2
+  justify-content center
+  +to-width($xxs-max-viewport)
+    margin-left -35px
+
+  &__item
+    margin: 35px 0 0 35px;
+    box-sizing: border-box;
+    border-radius 20px
+    min-width 350px
+    min-height 150px
+    text-align center
+    justify-content center
+    display flex
+    background linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%)
+    +to-width($xs-max-viewport)
+      min-width 240px
+    +to-width($xxs-max-viewport)
+      margin-top 15px
+      min-width 220px
+
+//---- common ------
+.qualification-text
+  font-family $font-second
+  font-size 18px
+  color white
+  padding-left 15px
+  padding-right 15px
+  +to-width($screen-sm-max)
+    font-size: 16px;
+    margin-bottom: 10px;
+  +to-width($screen-xs-max)
+    font-size 14px
+  &__valign
+    margin auto
+
+.faculty
+  &__btn-wrapper1
+    padding-top 45px
+    margin-bottom 100px
+    +to-width($xs-max-viewport)
+      padding-top 5px
+      margin-bottom 60px
+  &__task-item
+    &--top
+      display flex
+      align-items: center;
+      flex-direction row
+      background-color $gray-color
+      border-top-left-radius 20px
+      border-top-right-radius 20px
+      min-height 130px
+
+    &--bottom
+      display flex
+      align-items: center;
+      flex-direction row
+      background-color $gray-color
+      border-bottom-left-radius 20px
+      border-bottom-right-radius 20px
+      margin-top 2px
+      min-height 130px
+  &__task-number
+    color #00c0f3
+    font-size 4.2rem
+    padding 0 30px
+    min-width 102px
+    font-family $font-second
+    background linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%)
+    background-clip text
+    -webkit-background-clip text
+    -moz-background-clip text
+    text-fill-color transparent
+    -webkit-text-fill-color transparent
+    -moz-text-fill-color transparent
+    +to-width($sm-max-viewport)
+      min-width 60px
+      font-size 3rem
+      padding 0 15px
+  &__task-desc
+    padding-right 10px
+    padding-top  10px
+    padding-bottom 10px

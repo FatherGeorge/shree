@@ -228,6 +228,46 @@ $program-width = 65%
       max-width 100%
       flex 0 100%
 
+.with-border1
+  display flex
+  align-items center
+  justify-content center
+  position relative
+  +to-width($screen-xs-max)
+    flex-wrap wrap
+
+  span
+    display block
+    flex none
+    +to-width($screen-xs-max)
+      flex auto
+
+  &:before
+    content ""
+    display block
+    max-width 15%
+    flex 0 15%
+    height 1px
+    background-color #cdcece
+    margin-right 30px
+    +to-width($screen-xs-max)
+      display none
+  &:after
+    content ""
+    display block
+    max-width 15%
+    flex 0 15%
+    height 1px
+    background-color #cdcece
+    margin-left 30px
+    +to-width($screen-xs-max)
+      display none
+
+  &__long
+    &:before,
+    &:after
+      max-width 100%
+      flex 0 100%
 
 .text-border
   &__wrapper
