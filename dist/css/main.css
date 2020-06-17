@@ -1151,9 +1151,13 @@ textarea,
 }
 
 .faculty__task-desc {
-  padding-right: 10px;
+  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.faculty__margin {
+  margin: 55px 10px 90px;
 }
 
 .title__wrapper {
@@ -1177,6 +1181,11 @@ textarea,
   font-size: 20px;
 }
 
+.title__h2 {
+  font-family: Romul;
+  font-size: 24px;
+}
+
 .title__light {
   text-align: center;
   margin-top: 50px;
@@ -1195,7 +1204,7 @@ textarea,
 
 .title__pink {
   font-family: Romul;
-  font-size: 20px;
+  font-size: 24px;
   color: #92278f;
 }
 
@@ -4319,6 +4328,10 @@ input[type=checkbox].checkbox:checked ~ label {
     margin-bottom: 10px;
   }
 
+  .title__h2 {
+    font-size: 20px;
+  }
+
   .title__light-no-bottom-margin {
     margin-bottom: 0;
   }
@@ -4581,6 +4594,10 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .title__subtext {
     font-size: 13px;
+  }
+
+  .title__h2 {
+    font-size: 16px;
   }
 
   .title__light-no-bottom-margin {
@@ -5026,6 +5043,10 @@ input[type=checkbox].checkbox:checked ~ label {
     font-size: 3rem;
     padding: 0 15px;
   }
+
+  .faculty__task-desc {
+    padding-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 47.9em) {
@@ -5184,6 +5205,10 @@ input[type=checkbox].checkbox:checked ~ label {
   .faculty__btn-wrapper1 {
     padding-top: 5px;
     margin-bottom: 60px;
+  }
+
+  .faculty__margin {
+    margin: 40px 10px 60px;
   }
 }
 
@@ -5361,5 +5386,9 @@ input[type=checkbox].checkbox:checked ~ label {
   .qualification2__item {
     margin-top: 15px;
     min-width: 220px;
+  }
+
+  .faculty__margin {
+    margin: 25px 5px 40px;
   }
 }

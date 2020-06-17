@@ -39,7 +39,6 @@
       margin-top 15px
       min-width 220px
 
-//---- common ------
 .qualification-text
   font-family $font-second
   font-size 18px
@@ -98,6 +97,16 @@
       font-size 3rem
       padding 0 15px
   &__task-desc
-    padding-right 10px
+    padding-right 20px
     padding-top  10px
     padding-bottom 10px
+    +to-width($sm-max-viewport)
+      padding-right 10px
+  &__margin
+    margin 55px 10px 90px
+    +to-width($xs-max-viewport)
+      margin 40px 10px 60px
+    +to-width($xxs-max-viewport)
+      margin 25px 5px 40px
+
+//---- common ------
