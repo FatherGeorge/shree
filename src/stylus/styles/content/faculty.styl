@@ -109,4 +109,33 @@
     +to-width($xxs-max-viewport)
       margin 25px 5px 40px
 
+.course
+  &__item
+    padding 20px 60px
+    +to-width($xs-max-viewport)
+      padding 10px 20px
+
+  &__title
+    display flex
+    align-items baseline
+    justify-content space-between
+
+  &__number
+    font-weight 300
+    &:before
+      content ""
+      background-image url("/img/custom/flower-gradient.png")
+      background-size cover
+      width 40px
+      height 34px
+      display inline-block
+      vertical-align bottom
+      margin-right 30px
+
+  &__option
+    text-align right
 //---- common ------
+
+.gray-border
+  border 2px solid $gray-color
+  border-radius 20px

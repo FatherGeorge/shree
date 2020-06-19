@@ -1160,6 +1160,46 @@ textarea,
   margin: 55px 10px 90px;
 }
 
+.course__item {
+  padding: 20px 60px;
+}
+
+.course__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.course__number {
+  font-weight: 300;
+}
+
+.course__number:before {
+  content: "";
+  background-image: url("/img/custom/flower-gradient.png");
+  background-size: cover;
+  width: 40px;
+  height: 34px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 30px;
+}
+
+.course__option {
+  text-align: right;
+}
+
+.gray-border {
+  border: 2px solid #f2f2f2;
+  border-radius: 20px;
+}
+
 .title__wrapper {
   text-align: center;
   margin: 0 0 50px;
@@ -5209,6 +5249,10 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .faculty__margin {
     margin: 40px 10px 60px;
+  }
+
+  .course__item {
+    padding: 10px 20px;
   }
 }
 
