@@ -867,6 +867,13 @@ textarea,
   margin: 30px auto;
 }
 
+.line-divider-in-box {
+  height: 1px;
+  background-color: #000;
+  width: 65%;
+  margin: 10px auto;
+}
+
 .line-divider-white {
   height: 1px;
   background-color: #fff;
@@ -1039,6 +1046,83 @@ textarea,
   color: #fff;
 }
 
+.text__12light {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.text__12light--pink {
+  color: #92278f;
+}
+
+.text__14 {
+  font-size: 14px;
+}
+
+.text__16 {
+  font-size: 16px;
+}
+
+.text__16light {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.text__16light--romul {
+  font-family: Romul;
+}
+
+.text__18 {
+  font-size: 18px;
+}
+
+.text__romul {
+  font-family: Romul;
+}
+
+.text__pink16light {
+  font-size: 16px;
+  color: #92278f;
+  font-weight: 300;
+}
+
+.text__gray {
+  color: #939598;
+}
+
+.text__24 {
+  font-size: 20px;
+}
+
+.text__24--pink {
+  color: #92278f;
+}
+
+.text__24romul {
+  font-family: Romul;
+  font-size: 24px;
+}
+
+.text__24romul--pink {
+  color: #92278f;
+}
+
+.text__medium {
+  font-weight: 500;
+}
+
+.text__pink {
+  color: #92278f;
+}
+
+.text__blue {
+  color: #00c0f3;
+}
+
+.text__black {
+  color: #000;
+}
+
 .faculty-about {
   padding-top: 170px;
 }
@@ -1161,7 +1245,19 @@ textarea,
 }
 
 .course__item {
-  padding: 20px 60px;
+  padding: 20px 60px 60px;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.course__item:hover {
+  -webkit-box-shadow: inset 0 0 60px rgba(0,192,243,0.35);
+          box-shadow: inset 0 0 60px rgba(0,192,243,0.35);
+  background: -o-linear-gradient(45deg, #92278f 0%, rgba(146,39,143,0) 0%, rgba(0,192,243,0) 100%);
+  background: linear-gradient(45deg, #92278f 0%, rgba(146,39,143,0) 0%, rgba(0,192,243,0) 100%);
 }
 
 .course__title {
@@ -1195,9 +1291,139 @@ textarea,
   text-align: right;
 }
 
+.course__subtitle {
+  margin-top: 30px;
+}
+
+.course__subtitle :nth-child(1) {
+  margin-bottom: 0;
+}
+
+.course__part-title {
+  margin: 8px auto;
+}
+
+.course__buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.course__buy--more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.course__content {
+  min-height: 320px;
+}
+
+.course__statement {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.course__compare-package {
+  background-color: #f2f2f2;
+  padding: 45px 0 55px;
+}
+
+.course__general {
+  text-align: center;
+  margin: 90px 0 50px;
+  font-weight: normal;
+}
+
+.course__general--info {
+  font-size: 14px;
+  max-width: 940px;
+  margin: auto;
+}
+
+.package-types {
+  margin-bottom: 30px;
+}
+
+.package__wrapper {
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  padding: 23px 0 0;
+  margin-bottom: 80px;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.package__wrapper:hover {
+  background-color: transparent;
+  border: 1px solid #00c0f3;
+}
+
+.buy {
+  position: relative;
+  bottom: -13px;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+.buy__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .gray-border {
   border: 2px solid #f2f2f2;
   border-radius: 20px;
+}
+
+.list-small-dots {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-small-dots li {
+  padding: 0 0 0 10px;
+  position: relative;
+}
+
+.list-small-dots li:before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.margin-bottom90 {
+  margin-bottom: 90px;
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
 }
 
 .title__wrapper {
@@ -3540,6 +3766,17 @@ a.btn--mobile {
   display: none;
 }
 
+.btn--longer,
+a.btn--longer {
+  padding: 0 55px;
+}
+
+.btn--longer__no-shadow,
+a.btn--longer__no-shadow {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 input[type="submit"] {
   background-color: #00c0f3;
   color: #fff;
@@ -4338,6 +4575,14 @@ input[type=checkbox].checkbox:checked ~ label {
     min-width: 365px;
   }
 
+  .text__24 {
+    font-size: 20px;
+  }
+
+  .text__24romul {
+    font-size: 20px;
+  }
+
   .faculty-about {
     padding-top: 110px;
   }
@@ -4353,6 +4598,18 @@ input[type=checkbox].checkbox:checked ~ label {
   .qualification-text {
     font-size: 16px;
     margin-bottom: 10px;
+  }
+
+  .course__general {
+    margin-bottom: 40px;
+  }
+
+  .package__wrapper {
+    margin-bottom: 60px;
+  }
+
+  .margin-bottom90 {
+    margin-bottom: 60px;
   }
 
   .title__wrapper {
@@ -4511,6 +4768,11 @@ input[type=checkbox].checkbox:checked ~ label {
     display: block;
   }
 
+  .btn--longer,
+  a.btn--longer {
+    padding: 0 30px;
+  }
+
   .slick-dots {
     margin: 15px auto 0;
   }
@@ -4612,12 +4874,32 @@ input[type=checkbox].checkbox:checked ~ label {
     border: none;
   }
 
+  .text__24 {
+    font-size: 16px;
+  }
+
+  .text__24romul {
+    font-size: 16px;
+  }
+
   .faculty-about__title {
     margin-bottom: 15px;
   }
 
   .qualification-text {
     font-size: 14px;
+  }
+
+  .course__general {
+    margin-bottom: 20px;
+  }
+
+  .package__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .margin-bottom90 {
+    margin-bottom: 40px;
   }
 
   .title__wrapper {
@@ -4887,7 +5169,7 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .btn,
   a.btn {
-    width: 100%;
+    width: 95%;
     font-size: 13px;
     letter-spacing: 0.6px;
   }
@@ -5253,6 +5535,11 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .course__item {
     padding: 10px 20px;
+  }
+
+  .course__statement {
+    margin-top: 40px;
+    margin-bottom: 25px;
   }
 }
 

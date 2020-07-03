@@ -196,6 +196,12 @@
   width 10%
   margin: 30px auto
 
+.line-divider-in-box
+  height 1px
+  background-color black
+  width 65%
+  margin: 10px auto
+
 .line-divider-white
   height 1px
   background-color white
@@ -369,3 +375,52 @@
     text-align center
   &__white
     color white
+  &__12light
+    font-size 12px
+    font-weight 300
+    &--pink
+      color $second-color
+  &__14
+    font-size 14px
+  &__16
+    font-size 16px
+  &__16light
+    font-size 16px
+    font-weight 300
+    &--romul
+      font-family $font-second
+  &__18
+    font-size 18px
+  &__romul
+    font-family $font-second
+  &__pink16light
+    font-size 16px
+    color $second-color
+    font-weight 300
+  &__gray
+    color $dark-gray-color
+  &__24
+    font-size 20px
+    +to-width($screen-sm-max)
+      font-size: 20px;
+    +to-width($screen-xs-max)
+      font-size 16px
+    &--pink
+      color $second-color
+  &__24romul
+    font-family $font-second
+    font-size 24px
+    +to-width($screen-sm-max)
+      font-size: 20px;
+    +to-width($screen-xs-max)
+      font-size 16px
+    &--pink
+      color $second-color
+  &__medium
+    font-weight 500
+  &__pink
+    color $second-color
+  &__blue
+    color $base-color
+  &__black
+    color $black-color
