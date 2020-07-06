@@ -709,6 +709,9 @@ textarea,
   position: absolute;
   top: 60px;
   width: 100%;
+}
+
+.faculties-main__img > div :nth-child(1) {
   background-color: rgba(0,0,0,0.5);
 }
 
@@ -718,17 +721,9 @@ textarea,
   font-family: Romul;
 }
 
-.faculties-main__img:hover > div {
-  background-color: rgba(0,0,0,0);
-  -webkit-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  transition: all 0.8s;
-  color: #00c0f3;
-}
-
-.faculties-main__img:hover:before {
+.faculties-main__img:before {
   border-radius: 25px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -739,6 +734,33 @@ textarea,
   left: 0;
   right: 0;
   z-index: 3;
+}
+
+.faculties-main__img:hover > div :nth-child(1) {
+  background-color: rgba(0,0,0,0);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #00c0f3;
+}
+
+.faculties-main__img:hover:before {
+  background: rgba(0,0,0,0.5);
+}
+
+.faculties-main__img:hover :nth-child(2) {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease;
+  -o-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+.faculties-main__more {
+  margin-top: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+  -o-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
 }
 
 .faculties-main__name {
@@ -1278,7 +1300,7 @@ textarea,
 
 .course__number:before {
   content: "";
-  background-image: url("/img/custom/flower-gradient.png");
+  background-image: url("../img/custom/flower-gradient.png");
   background-size: cover;
   width: 40px;
   height: 34px;
@@ -4525,6 +4547,11 @@ input[type=checkbox].checkbox:checked ~ label {
 
   .faculties-main__img > div {
     top: 40px;
+  }
+
+  .faculties-main__more {
+    opacity: 1;
+    color: #fff;
   }
 
   .schedule {
