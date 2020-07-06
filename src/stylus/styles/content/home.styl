@@ -35,23 +35,51 @@ $program-width = 65%
     +to-width($screen-xs-max)
       font-size 13px
 
+  &__h2
+    font-family $font-second
+    font-size 24px
+    +to-width($screen-sm-max)
+      font-size: 20px;
+    +to-width($screen-xs-max)
+      font-size 16px
 
+  &__light
+    text-align center
+    margin-top 50px
+    font-size 1.4rem
+    font-weight 300
+
+    &--pink
+      color $second-color
+
+  &__light-no-bottom-margin
+    margin-bottom 5px
+    font-weight 300
+    +to-width($screen-sm-max)
+      margin-bottom 0
+    +to-width($screen-xs-max)
+      margin-bottom 0
+
+  &__pink
+    font-family $font-second
+    font-size 24px
+    color $second-color
 
 //-----------------
 .about
   padding 90px 0
-  
+
   +to-width($screen-sm-max)
     padding 40px 0
-  
+
   &__list
     margin 30px 0
     +to-width($screen-md-max)
       display block
-    
+
   &__item
     text-align center
-    
+
   &__icon
     width 167px
     height 167px
@@ -181,17 +209,73 @@ $program-width = 65%
     +to-width($screen-xs-max)
       flex auto
 
-  &:before,
+  &:before
+    content ""
+    display block
+    max-width 15%
+    flex 0 15%
+    height 1px
+    background-color #cdcece
+    margin-right 30px
+    +to-width($screen-xs-max)
+      display none
   &:after
     content ""
     display block
-    max-width 20%
-    flex 0 20%
+    max-width 15%
+    flex 0 15%
     height 1px
     background-color #cdcece
-    margin 0 30px
+    margin-left 30px
     +to-width($screen-xs-max)
       display none
+
+  &__long
+    &:before,
+    &:after
+      max-width 100%
+      flex 0 100%
+
+.with-border1
+  display flex
+  align-items center
+  justify-content center
+  position relative
+  +to-width($screen-xs-max)
+    flex-wrap wrap
+
+  span
+    display block
+    flex none
+    +to-width($screen-xs-max)
+      flex auto
+
+  &:before
+    content ""
+    display block
+    max-width 15%
+    flex 0 15%
+    height 1px
+    background-color #cdcece
+    margin-right 30px
+    +to-width($screen-xs-max)
+      display none
+  &:after
+    content ""
+    display block
+    max-width 15%
+    flex 0 15%
+    height 1px
+    background-color #cdcece
+    margin-left 30px
+    +to-width($screen-xs-max)
+      display none
+
+  &__long
+    &:before,
+    &:after
+      max-width 100%
+      flex 0 100%
 
 .text-border
   &__wrapper
@@ -428,7 +512,7 @@ $program-width = 65%
       top 50%
       transform translateY(-50%)
 
-.btn__wrapper--how .btn
+.btn__wrapper--center-overlapped .btn
   +to-width($screen-xs-max)
     width 70%
 

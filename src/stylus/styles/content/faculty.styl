@@ -1,0 +1,247 @@
+.faculty-about
+  padding-top 170px
+  h1
+    .title__main
+      line-height 3rem
+  +to-width($screen-sm-max)
+    padding-top 110px
+  &__title
+    text-align center
+    margin 0 0 35px
+    font-weight normal
+    +to-width($screen-sm-max)
+      margin-bottom 25px
+    +to-width($screen-xs-max)
+      margin-bottom 15px
+  &__text
+    text-align center
+    font-size 1.4rem
+    +to-width($screen-sm-max)
+      font-size 1.2rem
+.qualification2
+  justify-content center
+  +to-width($xxs-max-viewport)
+    margin-left -35px
+
+  &__item
+    margin: 35px 0 0 35px;
+    box-sizing: border-box;
+    border-radius 20px
+    min-width 350px
+    min-height 150px
+    text-align center
+    justify-content center
+    display flex
+    background linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%)
+    +to-width($xs-max-viewport)
+      min-width 240px
+    +to-width($xxs-max-viewport)
+      margin-top 15px
+      min-width 220px
+
+.qualification-text
+  font-family $font-second
+  font-size 18px
+  color white
+  padding-left 15px
+  padding-right 15px
+  +to-width($screen-sm-max)
+    font-size: 16px;
+    margin-bottom: 10px;
+  +to-width($screen-xs-max)
+    font-size 14px
+  &__valign
+    margin auto
+
+.faculty
+  &__btn-wrapper1
+    padding-top 45px
+    margin-bottom 100px
+    +to-width($xs-max-viewport)
+      padding-top 5px
+      margin-bottom 60px
+  &__task-item
+    &--top
+      display flex
+      align-items: center;
+      flex-direction row
+      background-color $gray-color
+      border-top-left-radius 20px
+      border-top-right-radius 20px
+      min-height 130px
+
+    &--bottom
+      display flex
+      align-items: center;
+      flex-direction row
+      background-color $gray-color
+      border-bottom-left-radius 20px
+      border-bottom-right-radius 20px
+      margin-top 2px
+      min-height 130px
+  &__task-number
+    color #00c0f3
+    font-size 4.2rem
+    padding 0 30px
+    min-width 102px
+    font-family $font-second
+    background linear-gradient(45deg, #92278f 0%, #92278f 0%, #00c0f3 100%)
+    background-clip text
+    -webkit-background-clip text
+    -moz-background-clip text
+    text-fill-color transparent
+    -webkit-text-fill-color transparent
+    -moz-text-fill-color transparent
+    +to-width($sm-max-viewport)
+      min-width 60px
+      font-size 3rem
+      padding 0 15px
+  &__task-desc
+    padding-right 20px
+    padding-top  10px
+    padding-bottom 10px
+    +to-width($sm-max-viewport)
+      padding-right 10px
+  &__margin
+    margin 55px 10px 90px
+    +to-width($xs-max-viewport)
+      margin 40px 10px 60px
+    +to-width($xxs-max-viewport)
+      margin 25px 5px 40px
+
+.course
+  &__item
+    padding 20px 60px 60px
+    cursor pointer
+    display block
+    transition all 0.7s
+    +to-width($xs-max-viewport)
+      padding 10px 20px
+    &:hover
+      box-shadow inset 0 0 60px rgba(0, 192, 243, 0.35)
+      background linear-gradient(45deg, #92278f 0%, rgba(146, 39, 143, 0) 0%, rgba(0, 192, 243, 0) 100%)
+
+  &__title
+    display flex
+    align-items baseline
+    justify-content space-between
+
+  &__number
+    font-weight 300
+    &:before
+      content ""
+      background-image url("../img/custom/flower-gradient.png")
+      background-size cover
+      width 40px
+      height 34px
+      display inline-block
+      vertical-align bottom
+      margin-right 30px
+
+  &__option
+    text-align right
+
+  &__subtitle
+    margin-top 30px
+    :nth-child(1)
+      margin-bottom 0
+
+  &__part-title
+    margin 8px auto
+
+  &__buy
+    display flex
+    justify-content space-between
+    &--more
+      display flex
+      align-items end
+
+  &__content
+    min-height 320px
+
+  &__statement
+    margin-top 80px
+    margin-bottom 50px
+    +to-width($xs-max-viewport)
+      margin-top 40px
+      margin-bottom 25px
+  &__compare-package
+    background-color $gray-color
+    padding 45px 0 55px
+
+  &__general
+    text-align center
+    margin 90px 0 50px
+    font-weight normal
+    +to-width($screen-sm-max)
+      margin-bottom 40px
+    +to-width($screen-xs-max)
+      margin-bottom 20px
+    &--info
+      font-size 14px
+      max-width 940px
+      margin auto
+
+.package-types
+  margin-bottom 30px
+
+.package
+  &__wrapper
+    background-color $gray-color
+    border 1px solid $gray-color
+    border-radius 20px
+    padding 23px 0 0
+    margin-bottom 80px
+    transition all 0.7s
+    +to-width($screen-sm-max)
+      margin-bottom 60px
+    +to-width($screen-xs-max)
+      margin-bottom 40px
+    &:hover
+      background-color transparent
+      border 1px solid $base-color
+.buy
+  position relative
+  bottom -13px
+  background-color white
+  padding 0 10px
+  border-radius 15px
+  &__wrapper
+    display flex
+    align-items baseline
+    justify-content center
+
+//---- common ------
+
+.gray-border
+  border 2px solid $gray-color
+  border-radius 20px
+
+.list-small-dots
+  margin 0
+  padding 0
+  list-style none
+  li
+    padding 0 0 0 10px
+    position relative
+
+    &:before
+      content ""
+      display block
+      width 3px
+      height 3px
+      border-radius 50%
+      background-color #000
+      position absolute
+      left 0
+      top 9px
+      transform translateY(-50%)
+
+.margin-bottom90
+  margin-bottom 90px
+  +to-width($screen-sm-max)
+    margin-bottom 60px
+  +to-width($screen-xs-max)
+    margin-bottom 40px
+.margin-bottom20
+  margin-bottom 20px

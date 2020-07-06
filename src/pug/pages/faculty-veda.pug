@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block head
+    - var cssFile = 'css/main.css'
+    - var pageTitle = 'Shreenathji- faculty veda'
+    - var bodyClass = 'faculty-veda'
+
+block content
+    include ../blocks/header
+
+    main.content
+        include ../content/faculty-veda
+
+    include ../blocks/footer

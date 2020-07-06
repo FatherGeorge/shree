@@ -19,7 +19,7 @@ a.btn
   //+to-width($screen-xm-max)
     //width 50%
   +to-width($screen-xs-max)
-    width 100%
+    width 95%
     font-size 13px
     letter-spacing: 0.6px;
 
@@ -51,6 +51,12 @@ a.btn
     display none
     +to-width($screen-sm-max)
       display block
+  &--longer
+    padding 0 55px
+    +to-width($screen-sm-max)
+      padding 0 30px
+    &__no-shadow
+      box-shadow none
 
 input[type="submit"]
   background-color $base-color
@@ -73,9 +79,11 @@ input[type="submit"]
   &--center
     justify-content center
 
-  &--how
+  &--center-overlapped
     justify-content center
     margin-top -28px
+    .btn
+      z-index 5
 
   > *:not(:first-child)
     margin-left 20px

@@ -157,14 +157,14 @@
 
         // 8. Mobile slider services ---------------------------
         function sliderServicesMobile() {
-            var servicesList = $('.services__list'),
+            var aboutList = $('.about__list'),
                 winW = $(window).outerWidth();
 
             if(winW < 768) {
-                servicesList.addClass('services__slider');
+                aboutList.addClass('services__slider');
             }
             else {
-                servicesList.removeClass('services__slider');
+                aboutList.removeClass('services__slider');
             }
 
             if($('.services__slider').length) {

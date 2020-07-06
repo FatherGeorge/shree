@@ -1,0 +1,441 @@
+
+.faculties-about
+  padding-top 170px
+  +to-width($screen-sm-max)
+    padding-top 110px
+  &__text
+    text-align center
+
+//---------------
+.faculties-main
+  padding-top 80px
+  +to-width($screen-sm-max)
+    padding-top 60px
+
+  &__list
+    margin-top 30px
+    margin-bottom 30px
+    > div
+      margin 0
+
+  &__item
+    text-align center
+
+  &__img
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    height 250px
+    background-size cover
+    background-position 50% 50%
+    background-repeat no-repeat
+    border-radius 25px
+    +to-width($screen-sm-max)
+      height 200px
+
+    &--1
+      background-image url(../img/custom/faculty-veda.jpg)
+
+    &--2
+      background-image url(../img/custom/faculty-yoga.jpg)
+
+    &--3
+      background-image url(../img/custom/faculty-jyotish.jpg)
+
+    &--4
+      background-image url(../img/custom/faculty-vastu.jpg)
+
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      border-radius 25px
+      background #92278f
+      background linear-gradient(45deg, #92278f 0%,#92278f 0%,#00c0f3 100%)
+      opacity 0.5
+
+    > div
+      z-index 4
+      position absolute
+      top 60px
+      width 100%
+      +to-width($screen-sm-max)
+        top 40px
+      :nth-child(1)
+        background-color rgba(0,0,0,.5)
+
+    &--title
+      padding 1em 1em
+      color white
+      font-family $font-second
+
+    &:before
+      border-radius 25px
+      background rgba(0,0,0,0)
+      transition: all .5s
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 3
+    &:hover
+      > div
+        :nth-child(1)
+          background-color rgba(0,0,0,0)
+          transition: all .8s
+          color $base-color
+      &:before
+        background rgba(0,0,0,.5)
+
+      :nth-child(2)
+        opacity 1
+        transition opacity 0.8s ease
+
+  &__more
+    margin-top 5px
+    opacity 0
+    transition opacity 0.8s ease
+    +to-width($screen-sm-max)
+      opacity 1
+      color white
+
+  &__name
+    padding-top 2em
+    text-transform uppercase
+    color $second-color
+
+    &:after
+      content: ''
+      display block
+      width 100%
+      margin 20px auto 15px
+      height 1px
+      background-color #000
+
+  &__desc
+    font-size 14px
+    line-height 2.5em
+
+//--------------------
+.schedule
+  padding 50px 0
+  +to-width($screen-sm-max)
+    padding 30px 0
+
+  &__icon
+
+    svg
+      width auto
+      height 35px
+      +to-width($screen-xs-max)
+        height 28px
+
+      path
+        fill $second-color
+
+.faculties-courses
+  padding 50px 0
+  +to-width($screen-sm-max)
+    padding 30px 0
+
+  &__list
+    > div
+      margin 15px 0 0 0
+
+  &__desc
+    padding-top 2rem
+    font-size 14px
+  &__img-1
+    background-image url(../img/custom/krishna.jpg)
+  &__img-2
+    background-image url(../img/custom/sky-stars-man.jpg)
+  &__img-3
+    background-image url(../img/custom/mans-eye.jpg)
+  &__img-4
+    background-image url(../img/custom/earth-woman.jpg)
+  &__img-5
+    background-image url(../img/custom/brain-food.jpg)
+  &__img-6
+    background-image url(../img/custom/sky-head.jpg)
+  &__img-7
+    background-image url(../img/custom/hug-yourself.jpg)
+  &__img-8
+    background-image url(../img/custom/pregnant.jpg)
+
+.faculties-knowledge
+  &__img-1
+    background-image url(../img/custom/books.jpg)
+  &__img-2
+    background-image url(../img/custom/student.jpg)
+//--- common ------
+
+.responsive-table-1
+  width 100%
+  border-radius 25px
+  background-color #f1f2f2
+  +to-width($screen-sm-max)
+    border-radius 10px
+
+  td
+    padding-top 1.5rem
+    padding-left 5px
+    padding-right 5px
+    text-align center
+    border-right solid 3px white
+
+  td:last-child
+    border-right 0
+
+  tr:last-child td
+    padding-bottom 1.5rem
+
+.underline-link
+  text-decoration underline
+  cursor pointer
+
+.line-divider
+  height 1px
+  background-color #cdcece
+  margin: 30px 0
+
+.line-divider-short
+  height 1px
+  background-color black
+  width 10%
+  margin: 30px auto
+
+.line-divider-in-box
+  height 1px
+  background-color black
+  width 65%
+  margin: 10px auto
+
+.line-divider-white
+  height 1px
+  background-color white
+  opacity 0.4
+  width 40%
+  margin: 25px auto 20px
+
+.list-in-oval
+  padding 60px 0
+  font-size 12px
+  line-height 1.6rem
+  +to-width($screen-sm-max)
+    padding 40px 0
+
+  &__wrapper
+    background-color $gray-color
+    text-align center
+    position relative
+    border-radius 150px
+    padding 25px 0
+    display flex
+    width 80%
+    margin 40px auto 40px
+    +to-width($screen-md-max)
+      width 100%
+    +to-width($screen-sm-max)
+      flex-direction column
+      border-radius 50px
+      justify-content center
+
+
+  &__list-left
+    flex-basis: 47%
+    text-align right
+    list-style none
+    +to-width($screen-sm-max)
+      flex-basis: 100%
+      text-align left
+      padding-left 1.3em
+      margin auto
+      min-width 360px
+    :before
+      content "·"
+      font-size 50px
+      vertical-align middle
+      text-align center
+      visibility hidden
+      +to-width($screen-sm-max)
+        visibility visible
+        padding-right .3em
+
+  &__list-right
+    flex-basis: 53%
+    list-style none
+    text-align left
+    padding-left 1.3em
+    +to-width($screen-sm-max)
+      flex-basis: 100%
+      margin auto
+      min-width 365px
+    :before
+      content "·"
+      font-size 50px
+      vertical-align middle
+      text-align center
+      padding-right .3em
+
+.two-blocks
+
+  &__with-border
+    border 2px solid $gray-color
+    border-radius 20px
+
+    &--title
+      margin-left 60px
+      margin-top 40px
+      font-weight normal
+      font-size 1.5rem
+      color #021026
+      +to-width($screen-xm-max)
+        margin-left 40px
+      +to-width($screen-xs-max)
+        margin-left 20px
+    ul
+      list-style none
+      padding-bottom 20px
+      li
+        margin 0 0 10px
+        padding 0 0 0 20px
+        &:before
+          content ""
+          display inline-block
+          width 15px
+          height 15px
+          margin-right 20px
+          vertical-align middle
+          background-image url(../img/custom/marker.png)
+          background-size cover
+      +to-width($screen-xm-max)
+        padding-left 20px
+      +to-width($screen-xs-max)
+        padding-left 0
+  &__with-backimg
+    background-size cover
+    background-position 50% 50%
+    border-radius 20px
+    position relative
+    min-height 445px
+    +to-width(1185px)
+      min-height 415px
+    +to-width($screen-md-min)
+      min-height 300px
+
+    &--left
+      padding 45px 60px 75px
+      +to-width($screen-md-max)
+        padding 30px 30px 60px
+      +to-width($screen-xs-max)
+        padding 15px 15px 40px
+    &--right
+      display flex
+      align-items center
+      &:before
+        content ""
+        position absolute
+        top 40px
+        bottom 40px
+        left 40px
+        right 40px
+        z-index 3
+        border 1px solid rgba(255, 255, 255, .5);
+        border-radius 15px
+        +to-width($screen-xs-max)
+          border none
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      background #92278f
+      background linear-gradient(45deg, #92278f 0%,#92278f 0%,#00c0f3 100%)
+      border-radius 20px
+      opacity 0.8
+
+  &__item
+    z-index 3
+    position relative
+    margin auto
+
+  &__with-margin
+    margin-top 50px
+    margin-bottom 140px
+    +to-width($screen-xm-max)
+      margin-top 30px
+      margin-bottom 70px
+  &__title2
+    font-weight 300
+    font-size 1.5rem
+    color white
+    text-align center
+    text-transform uppercase
+
+.text
+  &__bold
+    font-weight 500
+  &__c
+    display block
+    text-align center
+  &__white
+    color white
+  &__12light
+    font-size 12px
+    font-weight 300
+    &--pink
+      color $second-color
+  &__14
+    font-size 14px
+  &__16
+    font-size 16px
+  &__16light
+    font-size 16px
+    font-weight 300
+    &--romul
+      font-family $font-second
+  &__18
+    font-size 18px
+  &__romul
+    font-family $font-second
+  &__pink16light
+    font-size 16px
+    color $second-color
+    font-weight 300
+  &__gray
+    color $dark-gray-color
+  &__24
+    font-size 20px
+    +to-width($screen-sm-max)
+      font-size: 20px;
+    +to-width($screen-xs-max)
+      font-size 16px
+    &--pink
+      color $second-color
+  &__24romul
+    font-family $font-second
+    font-size 24px
+    +to-width($screen-sm-max)
+      font-size: 20px;
+    +to-width($screen-xs-max)
+      font-size 16px
+    &--pink
+      color $second-color
+  &__medium
+    font-weight 500
+  &__pink
+    color $second-color
+  &__blue
+    color $base-color
+  &__black
+    color $black-color
