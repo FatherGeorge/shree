@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block head
+    - var cssFile = 'css/main.css'
+    - var pageTitle = 'Shreenathji- first course page'
+    - var bodyClass = 'course-first.styl-page'
+
+block content
+    include ../blocks/header
+
+    main.content
+        include ../content/course-first
+
+    include ../blocks/footer

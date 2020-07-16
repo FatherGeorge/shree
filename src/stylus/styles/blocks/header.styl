@@ -295,7 +295,7 @@
   &__text
     width 65%
     max-width 700px
-    background-color rgba(0,0,0,.5)
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0))
     color #fff
     font-weight 300
     text-align center
@@ -309,23 +309,23 @@
       width: 100%;
       font-size: 13px;
 
-    &:before,
-    &:after
-      content ""
-      display block
-      position absolute
-      top 0
-      width 100px
-      height 122px
-      background transparent
-      +to-width($screen-sm-max)
-        display none
+    //&:before,
+    //&:after
+   //   content ""
+  //    display block
+    //  position absolute
+  //    top 0
+ //     width 100px
+  //    height 122px
+ //     background transparent
+   //   +to-width($screen-sm-max)
+  //      display none
 
-    &:before
-      left -100px
-      background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0))
-
-    &:after
-      right -100px
-      background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
+  //  &:before
+ //     left -100px
+ //     background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0))
+//
+ //   &:after
+  //    right -100px
+    //  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
 

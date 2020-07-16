@@ -1,0 +1,107 @@
+.course-banner
+  position relative
+  width 100%
+  overflow hidden
+  min-height 55rem
+  height 100vh
+
+  > .container
+    top 15rem
+    position relative
+    z-index 2
+
+  .course-first-back
+    background-image url("../img/custom/background-course-first-Brahma.jpeg")
+    background-position 50% 50%
+    background-size cover
+    position absolute
+    top 50%
+    left 50%
+    z-index -100
+    -webkit-transform translateX(-50%) translateY(-50%)
+    transform translateX(-50%) translateY(-50%)
+    min-width 100%
+    min-height 100%
+    width auto
+    height auto
+    pointer-events none
+
+  &__name
+    font-family: 'Romul', sans-serif;
+    color #fff
+    font-size 50px
+    margin 0
+    font-weight normal
+    +to-width($screen-md-max)
+      font-size 40px
+    +to-width($screen-sm-max)
+      font-size 30px
+
+  &__text
+    width 65%
+    max-width 700px
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0))
+    color #fff
+    font-weight 300
+    text-align center
+    padding 25px 0
+    margin 40px auto
+    position relative
+    +to-width($screen-sm-max)
+      width: 85%;
+      padding: 15px;
+    +to-width($screen-xs-max)
+      width: 100%;
+      font-size: 13px;
+
+.course-first-logo
+  display block
+  width 138px
+  height 81px
+  background-image url(../img/custom/img-wings.png)
+  background-repeat no-repeat
+  background-size cover
+  +to-width($screen-xs-max)
+    width 100%
+    background-size contain
+    background-position: center;
+
+.span-margin10
+  display inline-block;
+  margin-right 8px
+  margin-left 8px
+
+.background-gray
+  background-color $gray-color
+
+.course__info
+  position relative
+  z-index 0
+  &--item
+    background-color white
+    border-radius 20px
+    padding 35px 70px
+    position relative
+    +to-width($screen-xs-max)
+      padding 10px
+
+    &:after
+      content ""
+      position absolute
+      bottom 0
+      left 50%
+      transform translateX(-50%)
+      width 70%
+      height 50px
+      border-radius 50%
+      z-index -1
+      background-color rgba(0,0,0,.7)
+      filter: blur(30px);
+
+.course-objective-list
+  margin-top 15px !important
+  margin-bottom 15px !important
+
+// common
+.min-width245
+  min-width 245px
